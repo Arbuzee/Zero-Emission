@@ -21,13 +21,6 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     public void OnDrag(PointerEventData eventData)
     {
-        
-        if(!RectTransformUtility.RectangleContainsScreenPoint(panel, Input.mousePosition))
-        {
-            image.enabled = false;
-            if(!instantiated)
-                InstantiateBuilding();
-        }
 
         if(buildingObject != null)
         {
@@ -39,6 +32,12 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             transform.position = Input.mousePosition;
         }
 
+        if(!RectTransformUtility.RectangleContainsScreenPoint(panel, Input.mousePosition))
+        {
+            image.enabled = false;
+            if(!instantiated)
+                InstantiateBuilding();
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -56,10 +55,9 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private Vector3 GetMouseWorldPos()
     {
-        print("checking pos");
         RaycastHit hit;
         Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit);
-        Vector3 mousePoint = new Vector3(hit.point.x, 0.0f, hit.point.z);
+        Vector3 mousePoint = new Vector3(hit.point.x, 5.0f, hit.point.z);
         return mousePoint;
     }
 }
