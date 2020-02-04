@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3287343469978949219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Building_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2236783537115652876}
   - component: {fileID: 3002000465402605226}
   - component: {fileID: 5879334443488751291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,8 +136,7 @@ GameObject:
   - component: {fileID: 1391088976245033617}
   - component: {fileID: 9203514243569345804}
   - component: {fileID: 6322704142191952143}
-  - component: {fileID: 4262896064812564878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,16 +204,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4262896064812564878
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5499304703781230658}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
