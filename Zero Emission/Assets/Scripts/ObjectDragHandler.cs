@@ -19,6 +19,7 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         image = GetComponent<RawImage>();
         originalPosition = transform.position;
     }
+
     public void OnDrag(PointerEventData eventData)
     {
 
@@ -57,7 +58,7 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         RaycastHit hit;
         Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit);
-        Vector3 mousePoint = new Vector3(hit.point.x, 5.0f, hit.point.z);
+        Vector3 mousePoint = new Vector3(hit.point.x, 0.0f, hit.point.z);
         return mousePoint;
     }
 }
