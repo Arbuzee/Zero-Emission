@@ -1,9 +1,8 @@
-﻿//Author: Sofia Kauko
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlacementArea : MonoBehaviour
+public class PlacementAreaManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,11 +15,4 @@ public class PlacementArea : MonoBehaviour
     {
         
     }
-
-    public void LightUp()
-    {
-
-    }
-
-
 }
