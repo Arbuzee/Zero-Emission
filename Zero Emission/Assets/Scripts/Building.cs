@@ -5,6 +5,8 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     private Collider boxCollider;
+    [SerializeField] private string size;
+    public string Size { get => size; set => size = value; }
 
     private void Start()
     {

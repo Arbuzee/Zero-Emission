@@ -36,13 +36,18 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         if(!RectTransformUtility.RectangleContainsScreenPoint(panel, Input.mousePosition))
         {
             image.enabled = false;
-            if(!instantiated)
+            if (!instantiated)
+            {
                 InstantiateBuilding();
+                EventManager.Instance.FireEvent(new DragObjectEvent("object is being dragged", buildingObject));
+            }
         }
     }
 
+
     public void OnEndDrag(PointerEventData eventData)
     {
+        EventManager.Instance.FireEvent(new EndDragEvent("Dragging ended", buildingObject));
         image.enabled = true;
         transform.position = originalPosition;
         instantiated = false;
