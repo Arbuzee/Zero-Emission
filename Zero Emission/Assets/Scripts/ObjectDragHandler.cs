@@ -51,6 +51,7 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         image.enabled = true;
         transform.position = originalPosition;
         instantiated = false;
+        buildingObject = null;
     }
 
     private void InstantiateBuilding()

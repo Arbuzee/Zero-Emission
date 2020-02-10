@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4096638950619461150}
   m_Layer: 0
   m_Name: PlacementArea
-  m_TagString: Untagged
+  m_TagString: PlacementArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 5, z: 20}
+  m_Size: {x: 20, y: 20, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!108 &3571016734169063907
 Light:
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299c74e589657234092d4460c6782cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: Big
