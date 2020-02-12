@@ -47,8 +47,14 @@ public class PlacementAreaManager : MonoBehaviour
                 targetArea = pa;
         }
 
+        if(targetArea == null)
+        {
+            Destroy(ev.obj);
+            return;
+        }
+
+
         ev.obj.GetComponent<Building>().SnapToArea(targetArea);
-        targetArea.CurrentBuilding = ev.obj;
     }
 
 

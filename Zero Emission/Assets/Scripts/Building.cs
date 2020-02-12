@@ -26,14 +26,9 @@ public class Building : MonoBehaviour
     public void SnapToArea(PlacementArea pa)
     {
         Debug.Log(pa);
-        if(pa == null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
+        //snap to target area
         transform.position = pa.gameObject.transform.position;
-
+        //Give target area ref to new occupying building (if occupied).
         pa.SwapBuilding(this.gameObject);
     }
 }
