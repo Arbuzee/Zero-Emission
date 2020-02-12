@@ -13,6 +13,7 @@ public class Building : MonoBehaviour
         boxCollider = GetComponent<BoxCollider>();
     }
 
+    /*
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("PlacementArea"))
@@ -20,5 +21,19 @@ public class Building : MonoBehaviour
             print("snapping");
             transform.position = other.gameObject.transform.position;
         }
+    }
+    */
+    public void SnapToArea(PlacementArea pa)
+    {
+        Debug.Log(pa);
+        if(pa == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        transform.position = pa.gameObject.transform.position;
+
+        pa.SwapBuilding(this.gameObject);
     }
 }

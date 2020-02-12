@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndDragEvent : EventClass
 {
 
-    GameObject obj;
+    public GameObject obj;
     public EndDragEvent(string description, GameObject obj) : base(description)
     {
         this.obj = obj;

@@ -27,8 +27,6 @@ public class PlacementAreaManager : MonoBehaviour
     {
         string buildingSize = ev.obj.GetComponent<Building>().Size;
         GameObject gmo = ev.obj;
-        Debug.Log(gmo);
-        Debug.Log(gmo.GetComponent<Building>());
 
         foreach (PlacementArea pa in placementAreas)
         {
@@ -41,10 +39,18 @@ public class PlacementAreaManager : MonoBehaviour
 
     public void OnEndDrag(EndDragEvent ev)
     {
+        PlacementArea targetArea = null;
         foreach (PlacementArea pa in placementAreas)
         {
             pa.DisableLight();
+            if (pa.IsMarked)
+                targetArea = pa;
         }
+
+        ev.obj.GetComponent<Building>().SnapToArea(targetArea);
+        targetArea.CurrentBuilding = ev.obj;
     }
+
+
 
 }

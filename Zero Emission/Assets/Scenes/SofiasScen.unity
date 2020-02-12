@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d589a8546c51a9e4db64f77d21a4c955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 398732615}
+  building: {fileID: 640023461283398304, guid: 79f73e3d37de6f64aab8082b86479407, type: 3}
   panel: {fileID: 1792989804}
   layerMask:
     serializedVersion: 2
@@ -209,12 +209,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235340446}
   m_CullTransparentMesh: 0
---- !u!1 &398732615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 640023461283398304, guid: 79f73e3d37de6f64aab8082b86479407,
-    type: 3}
-  m_PrefabInstance: {fileID: 1188083686}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &747819050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,11 +1609,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4096638950619461150, guid: 239319918e4001c46919a04ebef46575,
-        type: 3}
-      propertyPath: size
-      value: Small
-      objectReference: {fileID: 0}
     - target: {fileID: 5502494373373009053, guid: 239319918e4001c46919a04ebef46575,
         type: 3}
       propertyPath: m_LocalPosition.x
