@@ -10,7 +10,7 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     private Vector3 originalPosition;
     [SerializeField] private GameObject building;
     [SerializeField] private RectTransform panel;
-    private GameObject buildingObject;
+    private GameObject placementObject;
     private bool instantiated = false;
     [SerializeField] private LayerMask layerMask;
 
@@ -23,9 +23,9 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData)
     {
 
-        if(buildingObject != null)
+        if(placementObject != null)
         {
-            buildingObject.transform.position = GetMouseWorldPos();
+            placementObject.transform.position = GetMouseWorldPos();
         }
 
         else
@@ -39,7 +39,7 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             if (!instantiated)
             {
                 InstantiateBuilding();
-                EventManager.Instance.FireEvent(new DragObjectEvent("object is being dragged", buildingObject));
+                EventManager.Instance.FireEvent(new DragObjectEvent("object is being dragged", placementObject));
             }
         }
     }
@@ -47,16 +47,16 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        EventManager.Instance.FireEvent(new EndDragEvent("Dragging ended", buildingObject));
+        EventManager.Instance.FireEvent(new EndDragEvent("Dragging ended", placementObject));
         image.enabled = true;
         transform.position = originalPosition;
         instantiated = false;
-        buildingObject = null;
+        placementObject = null;
     }
 
     private void InstantiateBuilding()
     {
-        buildingObject = Instantiate(building, Input.mousePosition, Quaternion.identity);
+        placementObject = Instantiate(building, Input.mousePosition, Quaternion.identity);
         instantiated = true;
     }
 
