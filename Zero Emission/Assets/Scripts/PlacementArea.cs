@@ -64,6 +64,7 @@ public class PlacementArea : MonoBehaviour
             Destroy(currentBuilding);
             currentBuilding = newBuilding;
         }
+        IsMarked = false; //to unmark as OnExit won't trigger when building is placed.
     }
 
     public void LightUp()

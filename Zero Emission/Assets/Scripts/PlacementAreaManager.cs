@@ -45,7 +45,11 @@ public class PlacementAreaManager : MonoBehaviour
         {
             pa.DisableLight();
             if (pa.IsMarked)
+            {
                 targetArea = pa;
+                break;
+            }
+            
         }
 
         if(targetArea == null)
