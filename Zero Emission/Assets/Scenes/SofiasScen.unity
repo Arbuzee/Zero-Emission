@@ -176,7 +176,7 @@ MonoBehaviour:
   panel: {fileID: 1792989804}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
 --- !u!114 &12807054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementArea (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8679756341924496905, guid: 239319918e4001c46919a04ebef46575,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 239319918e4001c46919a04ebef46575, type: 3}
 --- !u!1 &97429571
@@ -339,7 +344,7 @@ MonoBehaviour:
   panel: {fileID: 1792989804}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
 --- !u!114 &97429574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +432,7 @@ MonoBehaviour:
   panel: {fileID: 1792989804}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
 --- !u!114 &235340449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +521,7 @@ MonoBehaviour:
   panel: {fileID: 1792989804}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
 --- !u!114 &690764738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1555,6 +1560,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementArea (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8679756341924496905, guid: 239319918e4001c46919a04ebef46575,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 239319918e4001c46919a04ebef46575, type: 3}
 --- !u!1 &1846514655
@@ -1612,7 +1622,7 @@ MonoBehaviour:
   panel: {fileID: 1792989804}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
 --- !u!114 &1846514658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,6 +2059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementArea (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8679756341924496905, guid: 239319918e4001c46919a04ebef46575,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 239319918e4001c46919a04ebef46575, type: 3}
 --- !u!1001 &4806145355802488659
@@ -2191,6 +2206,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlacementArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679756341924496905, guid: 239319918e4001c46919a04ebef46575,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 239319918e4001c46919a04ebef46575, type: 3}

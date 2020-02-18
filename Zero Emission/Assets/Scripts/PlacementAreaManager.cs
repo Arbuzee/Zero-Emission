@@ -31,7 +31,8 @@ public class PlacementAreaManager : MonoBehaviour
 
         foreach (PlacementArea pa in placementAreas)
         {
-           if (pa.Size.Equals(buildingSize)) 
+            pa.IsMarked = false;
+            if (pa.Size.Equals(buildingSize)) 
             {
                 pa.LightUp();
             }
