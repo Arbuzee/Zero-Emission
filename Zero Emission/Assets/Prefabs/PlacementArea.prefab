@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3571016734169063907}
   - component: {fileID: 4096638950619461150}
   - component: {fileID: 2934098629260687994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlacementArea
   m_TagString: PlacementArea
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299c74e589657234092d4460c6782cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: Big
+  Size: 0
 --- !u!54 &2934098629260687994
 Rigidbody:
   m_ObjectHideFlags: 0
