@@ -32,14 +32,11 @@ public class PlacementArea : MonoBehaviour
     /// highly temporary solution since i cant figure out sum better right now.
     /// 
     /// </summary>
-    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Building"))
         {
             isMarked = true;
-            
-
             Debug.Log("A PA is marked");
         }
     }
@@ -48,14 +45,13 @@ public class PlacementArea : MonoBehaviour
         if (other.CompareTag("Building"))
         {
             isMarked = false;
-            
         }
     }
 
-
     public void SwapBuilding(GameObject newBuilding)
     {
-        if(CurrentBuilding == null)
+        IsMarked = false; //to unmark as OnExit won't trigger when building is placed.
+        if (CurrentBuilding == null)
         {
             currentBuilding = newBuilding;
         }
@@ -64,7 +60,7 @@ public class PlacementArea : MonoBehaviour
             Destroy(currentBuilding);
             currentBuilding = newBuilding;
         }
-        IsMarked = false; //to unmark as OnExit won't trigger when building is placed.
+        
     }
 
     public void LightUp()

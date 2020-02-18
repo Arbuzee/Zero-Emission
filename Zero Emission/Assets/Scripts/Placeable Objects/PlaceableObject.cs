@@ -42,6 +42,7 @@ namespace BuildingSizes
     {
         Small,
         Medium,
-        Large
+        Large,
+        RoadSize
     };
 }

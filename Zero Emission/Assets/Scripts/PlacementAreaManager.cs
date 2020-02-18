@@ -38,6 +38,8 @@ public class PlacementAreaManager : MonoBehaviour
         }
     }
 
+
+    //might move listening to individual placement areas.
     public void OnEndDrag(EndDragEvent ev)
     {
         PlacementArea targetArea = null;
@@ -49,9 +51,7 @@ public class PlacementAreaManager : MonoBehaviour
             if (pa.IsMarked && pa.Size.Equals(buildingSize))
             {
                 targetArea = pa;
-                break;
             }
-            
         }
 
         if(targetArea == null)
@@ -59,7 +59,6 @@ public class PlacementAreaManager : MonoBehaviour
             Destroy(ev.obj);
             return;
         }
-
 
         ev.obj.GetComponent<PlaceableObject>().SnapToArea(targetArea);
     }
