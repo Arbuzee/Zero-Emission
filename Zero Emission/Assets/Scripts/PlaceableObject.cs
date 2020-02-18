@@ -20,4 +20,13 @@ public abstract class PlaceableObject : MonoBehaviour
     {
         EventManager.Instance.UnregisterListener<EndDragEvent>(Replace);
     }
+
+    public void SnapToArea(PlacementArea pa)
+    {
+        Debug.Log(pa);
+        //snap to target area
+        transform.position = pa.gameObject.transform.position;
+        //Give target area ref to new occupying building (if occupied).
+        pa.SwapBuilding(this.gameObject);
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BuildingSizes;
 
 public class PlacementAreaManager : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class PlacementAreaManager : MonoBehaviour
     //When an object is dragged, call the placements areas that match and tell them to light up or whatevs man
     public void OnBeginDrag(DragObjectEvent ev)
     {
-        string buildingSize = ev.obj.GetComponent<Building>().Size;
+        SIZE buildingSize = ev.obj.GetComponent<Building>().GetSize();
         GameObject gmo = ev.obj;
 
         foreach (PlacementArea pa in placementAreas)
@@ -54,7 +55,7 @@ public class PlacementAreaManager : MonoBehaviour
         }
 
 
-        ev.obj.GetComponent<Building>().SnapToArea(targetArea);
+        ev.obj.GetComponent<PlaceableObject>().SnapToArea(targetArea);
     }
 
 

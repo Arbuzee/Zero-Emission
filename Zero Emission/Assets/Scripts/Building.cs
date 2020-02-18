@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BuildingSizes;
 
-public class Building : MonoBehaviour
+public class Building : PlaceableObject
 {
     private Collider boxCollider;
-    [SerializeField] private string size;
-    public string Size { get => size; set => size = value; }
+    //[SerializeField] private string size;
+
+    //public string Size { get => size; set => size = value; }
+    public SIZE Size;
 
     private void Start()
     {
@@ -23,6 +26,7 @@ public class Building : MonoBehaviour
         }
     }
     */
+    /*
     public void SnapToArea(PlacementArea pa)
     {
         Debug.Log(pa);
@@ -31,4 +35,20 @@ public class Building : MonoBehaviour
         //Give target area ref to new occupying building (if occupied).
         pa.SwapBuilding(this.gameObject);
     }
+    */
+
+    public SIZE GetSize()
+    {
+        return Size;
+    }
+}
+
+namespace BuildingSizes
+{
+    public enum SIZE
+    {
+        Small,
+        Medium,
+        Large
+    };
 }

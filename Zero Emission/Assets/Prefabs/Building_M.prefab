@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: Big
+  Size: 2
 --- !u!1 &4412212486021253737
 GameObject:
   m_ObjectHideFlags: 0

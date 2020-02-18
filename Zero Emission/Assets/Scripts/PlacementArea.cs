@@ -2,14 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BuildingSizes;
 
 public class PlacementArea : MonoBehaviour
 {
     private bool isMarked;
     Light paLight;
-    [SerializeField]private string size;
+    //[SerializeField]private string size;
     private GameObject currentBuilding;
-    public string Size { get => size; set => size = value; }
+    //public string Size { get => size; set => size = value; }
+    public SIZE Size;
     public bool IsMarked { get => isMarked; set => isMarked = value; }
     public GameObject CurrentBuilding { get => currentBuilding; set => currentBuilding = value; }
 

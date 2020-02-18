@@ -928,6 +928,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BikeRoad
       objectReference: {fileID: 0}
+    - target: {fileID: 614093056824910922, guid: 8bef320eed62b134a9577c74ee55f7da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2031526165321178448, guid: 8bef320eed62b134a9577c74ee55f7da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1471,6 +1476,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4096638950619461150, guid: 239319918e4001c46919a04ebef46575,
+        type: 3}
+      propertyPath: Size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5502494373373009053, guid: 239319918e4001c46919a04ebef46575,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1609,6 +1619,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4096638950619461150, guid: 239319918e4001c46919a04ebef46575,
+        type: 3}
+      propertyPath: Size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5502494373373009053, guid: 239319918e4001c46919a04ebef46575,
         type: 3}
       propertyPath: m_LocalPosition.x
