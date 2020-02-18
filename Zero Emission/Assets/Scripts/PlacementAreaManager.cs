@@ -26,7 +26,7 @@ public class PlacementAreaManager : MonoBehaviour
     //When an object is dragged, call the placements areas that match and tell them to light up or whatevs man
     public void OnBeginDrag(DragObjectEvent ev)
     {
-        SIZE buildingSize = ev.obj.GetComponent<Building>().GetSize();
+        SIZE buildingSize = ev.obj.GetComponent<PlaceableObject>().Size;
         GameObject gmo = ev.obj;
 
         foreach (PlacementArea pa in placementAreas)
@@ -41,10 +41,12 @@ public class PlacementAreaManager : MonoBehaviour
     public void OnEndDrag(EndDragEvent ev)
     {
         PlacementArea targetArea = null;
+        SIZE buildingSize = ev.obj.GetComponent<PlaceableObject>().Size;
+
         foreach (PlacementArea pa in placementAreas)
         {
             pa.DisableLight();
-            if (pa.IsMarked)
+            if (pa.IsMarked && pa.Size.Equals(buildingSize))
             {
                 targetArea = pa;
                 break;

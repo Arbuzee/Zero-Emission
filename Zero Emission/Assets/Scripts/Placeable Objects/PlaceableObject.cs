@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BuildingSizes;
 
 public abstract class PlaceableObject : MonoBehaviour
 {
     private Vector3 rotation;
+    [SerializeField]private SIZE size;
+
+    public SIZE Size { get => size; set => size = value; }
 
     private void Start()
     {
@@ -29,4 +33,15 @@ public abstract class PlaceableObject : MonoBehaviour
         //Give target area ref to new occupying building (if occupied).
         pa.SwapBuilding(this.gameObject);
     }
+}
+
+
+namespace BuildingSizes
+{
+    public enum SIZE
+    {
+        Small,
+        Medium,
+        Large
+    };
 }
