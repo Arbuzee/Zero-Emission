@@ -1110,6 +1110,39 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7579367534361103404, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 1100872973986246858, guid: a21c0881b5f007140947ef7e64ff56da,
+        type: 3}
+    - target: {fileID: 7579367534361103405, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 66c3fd59644f3f14788f69989aa03e58, type: 3}
+    - target: {fileID: 7579367534440310473, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 1346226645153034028, guid: 49898c69b3837bb48811692ccedcfd22,
+        type: 3}
+    - target: {fileID: 7579367534440310474, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 33428c20491993a48a4d3e98826fc8c2, type: 3}
+    - target: {fileID: 7579367534524933377, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 4351664577164254700, guid: b2290c16e6ac9aa418aedfb4d7b178a8,
+        type: 3}
+    - target: {fileID: 7579367534524933378, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: ced318010053dd740bb10eecf94c814b, type: 3}
     - target: {fileID: 7579367534855265954, guid: 0c334c3b9a4051649aee0114f638031e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1220,6 +1253,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7579367534912337229, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 7376722978989256404, guid: 7acc43332ce467b43801710f48b571c9,
+        type: 3}
+    - target: {fileID: 7579367534912337230, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 2b47e66941e2f79438ae3558bd574aa5, type: 3}
+    - target: {fileID: 7579367535971163501, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 7412624614408499010, guid: fb1b12421ac7295478523b89294d2acf,
+        type: 3}
+    - target: {fileID: 7579367535971163502, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: b48ef07056472b549af51466b091b060, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
 --- !u!1001 &648498415
