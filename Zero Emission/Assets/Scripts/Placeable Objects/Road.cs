@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Road : PlaceableObject
 {
-
+    private int RoadID;
     private void Start()
     {
         EventManager.Instance.RegisterListener<EndDragEvent>(OnRoadDrop);
