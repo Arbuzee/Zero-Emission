@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Pedestrian : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
+    [SerializeField] private float minSpeed;
+    [SerializeField] private float maxSpeed;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float stopDistance;
     [SerializeField] private Vector3 destination;
 
+    private float movementSpeed;
     private Vector3 lastPosition;
-    private bool reachedDestination;
     private Vector3 velocity;
+
+    public bool reachedDestination;
 
     private void Start()
     {
-        
+        movementSpeed = Random.Range(minSpeed, maxSpeed);
     }
 
     private void Update()

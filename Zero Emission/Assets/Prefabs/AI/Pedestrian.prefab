@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7432749928693799703}
   - component: {fileID: 6912729132807070025}
   - component: {fileID: 933930898136281114}
+  - component: {fileID: 2731822448683522019}
   m_Layer: 0
   m_Name: Pedestrian
   m_TagString: Untagged
@@ -96,7 +97,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &6912729132807070025
 CapsuleCollider:
@@ -124,7 +125,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d554e7b69e985f24594a6f266f61a0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0
-  rotationSpeed: 0
-  stopDistance: 8.01
+  minSpeed: 3
+  maxSpeed: 5
+  rotationSpeed: 300
+  stopDistance: 1
   destination: {x: 0, y: 0, z: 0}
+  reachedDestination: 0
+--- !u!114 &2731822448683522019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244734992195791066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76b0bf2e2848844abf27514a4398f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWaypoint: {fileID: 0}
+  direction: 0
