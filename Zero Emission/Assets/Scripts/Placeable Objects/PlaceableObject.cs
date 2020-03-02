@@ -30,6 +30,7 @@ public abstract class PlaceableObject : MonoBehaviour
         Debug.Log(pa);
         //snap to target area
         transform.position = pa.gameObject.transform.position;
+        transform.forward = pa.gameObject.transform.forward;
         //Give target area ref to new occupying building (if occupied).
         pa.SwapBuilding(this.gameObject);
     }
