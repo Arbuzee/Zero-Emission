@@ -72,6 +72,7 @@ public class WaypointManagerWindow : EditorWindow
             waypoint.previousWaypoint.nextWaypoint = waypoint;
             waypoint.transform.position = waypoint.previousWaypoint.transform.position;
             waypoint.transform.forward = waypoint.previousWaypoint.transform.forward;
+            waypoint.width = waypoint.previousWaypoint.width;
         }
 
         Selection.activeGameObject = waypoint.gameObject;
