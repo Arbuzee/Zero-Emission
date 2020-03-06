@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1002102590298649718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2187174722481406560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 496062e391c22e647b89f2b44d96b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadType: GreenROad
+  greenSiblingRoad: {fileID: 0}
+  regularSiblingRoad: {fileID: 0}
 --- !u!1 &6621233165984922865
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +27,7 @@ GameObject:
   - component: {fileID: 4987399187805726793}
   m_Layer: 0
   m_Name: RoadPiece_show
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496062e391c22e647b89f2b44d96b714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 3
+  roadType: GreenRoad
+  greenSiblingRoad: {fileID: 0}
+  regularSiblingRoad: {fileID: 0}
 --- !u!1001 &8102232440878338244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,8 +129,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roadpiece
       objectReference: {fileID: 0}
+    - target: {fileID: 7938314146825949860, guid: cbbcef7d98c37a24998058d3af1588d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbbcef7d98c37a24998058d3af1588d1, type: 3}
+--- !u!1 &2187174722481406560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7938314146825949860, guid: cbbcef7d98c37a24998058d3af1588d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8102232440878338244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8862883543635076534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 761003720853239154, guid: cbbcef7d98c37a24998058d3af1588d1,

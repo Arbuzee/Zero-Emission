@@ -26,6 +26,13 @@ public class PlacementAreaManager : MonoBehaviour
     //When an object is dragged, call the placements areas that match and tell them to light up or whatevs man
     public void OnBeginDrag(DragObjectEvent ev)
     {
+        //temp solution 
+        if (RoadCheck(ev.obj))
+        {
+            return;
+        }
+
+
         SIZE buildingSize = ev.obj.GetComponent<PlaceableObject>().Size;
         GameObject gmo = ev.obj;
 
@@ -43,6 +50,12 @@ public class PlacementAreaManager : MonoBehaviour
     //might move listening to individual placement areas.
     public void OnEndDrag(EndDragEvent ev)
     {
+        //temp solution 
+        if (RoadCheck(ev.obj))
+        {
+            return;
+        }
+
         PlacementArea targetArea = null;
         SIZE buildingSize = ev.obj.GetComponent<PlaceableObject>().Size;
 
@@ -65,5 +78,13 @@ public class PlacementAreaManager : MonoBehaviour
     }
 
 
+
+
+    private bool RoadCheck(GameObject obj)
+    {
+        Road road;
+        bool isRoad = obj.TryGetComponent<Road>(out road);
+        return isRoad;
+    }
 
 }

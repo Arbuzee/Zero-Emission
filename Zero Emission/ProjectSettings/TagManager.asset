@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlacementArea
   - Building
+  - Road
   layers:
   - Default
   - TransparentFX

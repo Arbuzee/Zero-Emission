@@ -13,6 +13,7 @@ public class Building : PlaceableObject
         boxCollider = GetComponent<BoxCollider>();
     }
 
+
     
 }
 

@@ -16,9 +16,10 @@ public class RoadPlacementArea : MonoBehaviour
         
     }
 
-    public void ChangeRoad(EndDragEvent ev)
+    public void ChangeRoad(EndDragEvent ev) // varför event? gör som med vanliga placement area, så slipper man iterera genom alla vägar och se vilken som är närmast släppet
     {
         //get roadtype the placing road has (bicycle, regular...)
+        
         //instantiate that type of piece with this ID and give this(roadpiece that this script is attached to) rotation and transform.
 
     }
