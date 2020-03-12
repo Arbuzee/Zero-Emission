@@ -12,7 +12,6 @@ public class Pedestrian : MonoBehaviour
 
     private float movementSpeed;
     private Vector3 lastPosition;
-    private Vector3 velocity;
 
     public bool reachedDestination;
 
@@ -41,12 +40,6 @@ public class Pedestrian : MonoBehaviour
             {
                 reachedDestination = true;
             }
-            velocity = (transform.position - lastPosition) / Time.deltaTime;
-            velocity.y = 0;
-            var velocityMagnitude = velocity.magnitude;
-            velocity = velocity.normalized;
-            var fwdDotProduct = Vector3.Dot(transform.forward, velocity);
-            var rightDotProduct = Vector3.Dot(transform.right, velocity);
         }
     }
 

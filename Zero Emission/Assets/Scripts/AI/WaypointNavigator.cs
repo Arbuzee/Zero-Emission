@@ -7,11 +7,11 @@ public class WaypointNavigator : MonoBehaviour
     private Pedestrian pedestrian;
 
     public Waypoint currentWaypoint;
-    public int direction;
+    public int direction = 0;
 
     private void Start()
     {
-        direction = Mathf.RoundToInt(Random.Range(0f, 1f));
+        //direction = Mathf.RoundToInt(Random.Range(0f, 1f));
         pedestrian = GetComponent<Pedestrian>();
         pedestrian.SetDestination(currentWaypoint.GetPosition());
     }
