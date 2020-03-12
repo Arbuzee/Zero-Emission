@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PreviewTown.unity
     guid: bf6d1df1015430e40838595a822e374a
+  - enabled: 1
+    path: Assets/Scenes/GamlaStan.unity
+    guid: e3a7dc5a9bfe7c24291aa5095369fca0
   m_configObjects: {}
