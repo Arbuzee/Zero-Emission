@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496062e391c22e647b89f2b44d96b714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadType: 
+  roadType: RegularRoad
   greenSiblingRoad: {fileID: 2649784928548852219, guid: 6e08a3600451a124e9fb903ed21d3a6d,
     type: 3}
   regularSiblingRoad: {fileID: 2754719167791682260}

@@ -51,16 +51,25 @@ public class PlacementArea : MonoBehaviour
     public void SwapBuilding(GameObject newBuilding)
     {
         IsMarked = false; //to unmark as OnExit won't trigger when building is placed.
+        int CO2Rating;
+
         if (CurrentBuilding == null)
         {
+            //get new buildings co2 rating
+            CO2Rating = newBuilding.GetComponent<Building>().CO2Rating;
             currentBuilding = newBuilding;
+            
         }
         else
         {
+            //calculate co2 diff between swapped buildings
+            CO2Rating = newBuilding.GetComponent<Building>().CO2Rating - currentBuilding.GetComponent<Building>().CO2Rating;
             Destroy(currentBuilding);
             currentBuilding = newBuilding;
         }
-        
+
+        //send CO2-change event
+        EventManager.Instance.FireEvent(new CO2Change("possible Co2 level change has occured", newBuilding, CO2Rating));
     }
 
     public void LightUp()
