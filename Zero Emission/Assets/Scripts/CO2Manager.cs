@@ -15,6 +15,8 @@ public class CO2Manager : MonoBehaviour
     void Start()
     {
         CO2Indikator = GetComponent<Image>();
+        CO2Indikator.type = Image.Type.Filled;
+        CO2Indikator.fillMethod = Image.FillMethod.Vertical;
         EventManager.Instance.RegisterListener<CO2Change>(OnCO2Change);
         co2Max = UpdateCo2Level(0); // beginning of game decides what co2 lvl is 100% of bar.
         CO2Level = co2Max;
@@ -41,7 +43,6 @@ public class CO2Manager : MonoBehaviour
     {
         Debug.Log("updating CO2 level");
         int co2;
-        //calc co2 level of town --> change this to re-calc the town emission? OR: CO2event holds difference between old building and new at swap.
         co2 = CO2Level + value;
         return co2;
     }
@@ -49,7 +50,8 @@ public class CO2Manager : MonoBehaviour
     private void FillCo2Indicator()
     {
         Debug.Log("filling co2 meter");
-        CO2Indikator.fillAmount = GetFillAmount();
+        //CO2Indikator.fillAmount = GetFillAmount();
+        CO2Indikator.fillAmount = CO2Indikator.fillAmount - 0.1f;
     }
 
     private int GetFillAmount()
