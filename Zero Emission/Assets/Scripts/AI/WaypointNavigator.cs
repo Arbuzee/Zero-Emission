@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaypointNavigator : MonoBehaviour
 {
-    private Pedestrian pedestrian;
+    private Vehicle pedestrian;
 
     public Waypoint currentWaypoint;
     public int direction = 0;
@@ -12,7 +12,7 @@ public class WaypointNavigator : MonoBehaviour
     private void Start()
     {
         //direction = Mathf.RoundToInt(Random.Range(0f, 1f));
-        pedestrian = GetComponent<Pedestrian>();
+        pedestrian = GetComponent<Vehicle>();
         pedestrian.SetDestination(currentWaypoint.GetPosition());
     }
 

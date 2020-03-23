@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PedestrianSpawner : MonoBehaviour
+public class VehicleSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject pedestrianPrefab;
     [SerializeField] private int pedestrianSpawnCount;

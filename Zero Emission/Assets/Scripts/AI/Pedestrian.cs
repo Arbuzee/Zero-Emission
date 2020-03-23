@@ -1,51 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Pedestrian : MonoBehaviour
 {
-    [SerializeField] private float minSpeed;
-    [SerializeField] private float maxSpeed;
-    [SerializeField] private float rotationSpeed;
-    [SerializeField] private float stopDistance;
-    [SerializeField] private Vector3 destination;
+    [SerializeField] private GameObject[] waypoints;
+    [SerializeField] private float waypointDistance;
+    [SerializeField] private Vector3 currentWaypoint;
+    private NavMeshAgent agent;
 
-    private float movementSpeed;
-    private Vector3 lastPosition;
-
-    public bool reachedDestination;
-
-    private void Start()
+    void Start()
     {
-        movementSpeed = Random.Range(minSpeed, maxSpeed);
+        agent = GetComponent<NavMeshAgent>();
+        agent.SetDestination(waypoints[0].transform.position);
     }
 
-    private void Update()
+    void Update()
     {
-        if (transform.position != destination)
+        if(Input.GetKeyDown(KeyCode.V))
         {
-            Vector3 destinationDirection = destination - transform.position;
-            destinationDirection.y = 0;
-
-            float destinationDistance = destinationDirection.magnitude;
-
-            if(destinationDistance >= stopDistance)
-            {
-                reachedDestination = false;
-                Quaternion targetRotation = Quaternion.LookRotation(destinationDirection);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-                transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
-            }
-            else
-            {
-                reachedDestination = true;
-            }
+            agent.SetDestination(waypoints[1].transform.position);
         }
-    }
 
-    public void SetDestination(Vector3 destination)
-    {
-        this.destination = destination;
-        reachedDestination = false;
+        currentWaypoint = agent.destination;
     }
 }
