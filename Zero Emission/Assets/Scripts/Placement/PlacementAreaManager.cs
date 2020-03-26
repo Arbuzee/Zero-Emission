@@ -15,6 +15,17 @@ public class PlacementAreaManager : MonoBehaviour
         EventManager.Instance.RegisterListener<DragObjectEvent>(OnBeginDrag);
         EventManager.Instance.RegisterListener<EndDragEvent>(OnEndDrag);
 
+        //Set max CO2 level for Co2lvl manager.
+        int Co2MaxLevel = 0;
+        foreach (PlacementArea pa in placementAreas) // break loop into other method?
+        {
+            if(pa.CurrentBuilding != null)
+            {
+                Co2MaxLevel += pa.CurrentBuilding.GetComponent<PlaceableObject>().CO2Rating;
+            }
+        }
+
+        CO2Manager.Instance.SetMaxCO2(Co2MaxLevel);
     }
 
     // Update is called once per frame

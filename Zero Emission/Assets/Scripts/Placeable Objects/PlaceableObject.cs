@@ -7,7 +7,8 @@ public abstract class PlaceableObject : MonoBehaviour
 {
     private Vector3 rotation;
     [SerializeField]private SIZE size;
-
+    [SerializeField] private int co2Rating;
+    public int CO2Rating { get => co2Rating; private set => co2Rating = value; }
     public SIZE Size { get => size; set => size = value; }
 
     private void Start()
