@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.15
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
-    maxJumpAcrossDistance: 0
+    maxJumpAcrossDistance: 1
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.05
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1052846762}
   nextWaypoint: {fileID: 1367054068}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &308854222
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1999910422}
   nextWaypoint: {fileID: 1655532119}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &333746250
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1367054068}
   nextWaypoint: {fileID: 649503326}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &341739789
@@ -943,7 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 769352886}
   nextWaypoint: {fileID: 1047698543}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &410803802
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 855339826}
   nextWaypoint: {fileID: 908087125}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &515983476
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 649503326}
   nextWaypoint: {fileID: 1738457273}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &559238894
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 341739788}
   nextWaypoint: {fileID: 559238893}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &649503327
@@ -1234,7 +1234,7 @@ PrefabInstance:
     - target: {fileID: 5226563519993478719, guid: c77328c71935d7745b31fc7185056690,
         type: 3}
       propertyPath: m_Radius
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6244734992195791066, guid: c77328c71935d7745b31fc7185056690,
         type: 3}
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1376818269}
   nextWaypoint: {fileID: 410803801}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &769352887
@@ -1552,7 +1552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 2146873852}
   nextWaypoint: {fileID: 515983475}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &855339827
@@ -1600,7 +1600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 2053681247}
   nextWaypoint: {fileID: 2146191013}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &885338858
@@ -1648,7 +1648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 515983475}
   nextWaypoint: {fileID: 1808518704}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &908087126
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 410803801}
   nextWaypoint: {fileID: 2146873852}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1047698544
@@ -1830,7 +1830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1756201351}
   nextWaypoint: {fileID: 308854221}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1052846763
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 308854221}
   nextWaypoint: {fileID: 341739788}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1367054069
@@ -2192,7 +2192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 2146191013}
   nextWaypoint: {fileID: 769352886}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!1 &1434544412
@@ -2448,7 +2448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1738457273}
   nextWaypoint: {fileID: 1695540432}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1561577434
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 333746249}
   nextWaypoint: {fileID: 2053681247}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1655532120
@@ -2619,7 +2619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1561577433}
   nextWaypoint: {fileID: 1999910422}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1695540433
@@ -2784,7 +2784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 559238893}
   nextWaypoint: {fileID: 1561577433}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1738457274
@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1808518704}
   nextWaypoint: {fileID: 1052846762}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1756201352
@@ -3094,7 +3094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 908087125}
   nextWaypoint: {fileID: 1756201351}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1808518705
@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1695540432}
   nextWaypoint: {fileID: 333746249}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &1999910423
@@ -3578,7 +3578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1655532119}
   nextWaypoint: {fileID: 885338857}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &2053681248
@@ -3816,7 +3816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 885338857}
   nextWaypoint: {fileID: 1376818269}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &2146191014
@@ -3864,7 +3864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1047698543}
   nextWaypoint: {fileID: 855339826}
-  width: 5.7
+  width: 1.6
   branches: []
   branchRatio: 0.5
 --- !u!4 &2146873853
