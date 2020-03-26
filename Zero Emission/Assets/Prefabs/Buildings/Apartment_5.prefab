@@ -3699,6 +3699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1
+  co2Rating: 10
 --- !u!1 &5247814380833957918
 GameObject:
   m_ObjectHideFlags: 0

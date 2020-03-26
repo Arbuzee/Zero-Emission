@@ -9,12 +9,12 @@ public class PlacementArea : MonoBehaviour
     private bool isMarked;
     Light paLight;
     //[SerializeField]private string size;
-    private GameObject currentBuilding;
+    [SerializeField]private GameObject currentBuilding;
     //public string Size { get => size; set => size = value; }
     public SIZE Size;
     public bool IsMarked { get => isMarked; set => isMarked = value; }
     public GameObject CurrentBuilding { get => currentBuilding; set => currentBuilding = value; }
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,16 +28,13 @@ public class PlacementArea : MonoBehaviour
     }
 
     
-    /// <summary>
-    /// highly temporary solution since i cant figure out sum better right now.
-    /// 
-    /// </summary>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Building"))
         {
             isMarked = true;
-            Debug.Log("A PA is marked");
+            //Debug.Log("A PA is marked");
+            
         }
     }
     private void OnTriggerExit(Collider other)
