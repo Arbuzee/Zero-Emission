@@ -43,9 +43,24 @@ public class Vehicle : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Despawner"))
+        {
+            print("Despawn trigger hit");
+            Despawn();
+        }
+    }
+
     public void SetDestination(Vector3 destination)
     {
         this.destination = destination;
         reachedDestination = false;
+    }
+
+    private void Despawn()
+    {
+        EventManager.Instance.FireEvent(new VehicleDespawnEvent("Vehicle despawned"));
+        Destroy(gameObject);
     }
 }

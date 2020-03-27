@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject pedestrianPrefab;
-    [SerializeField] private int pedestrianSpawnCount;
+    [SerializeField] private GameObject vehiclePrefab;
+    [SerializeField] private GameObject bikePrefab;
+    [SerializeField] private int vehicleSpawnCount;
+    [SerializeField] GameObject[] vehicleSpawnPoints;
+    [SerializeField] private float carToBikeRatio;
+
+    private int activeVehicleCount = 0;
 
     private void Start()
     {
-        StartCoroutine(Spawn());
+        StartCoroutine(IntialSpawn());
+        EventManager.Instance.RegisterListener<VehicleDespawnEvent>(DespawnEvent);
     }
 
-    IEnumerator Spawn()
+    IEnumerator IntialSpawn()
     {
         int count = 0;
-        while (count < pedestrianSpawnCount)
+        while (count < vehicleSpawnCount)
         {
-            GameObject obj = Instantiate(pedestrianPrefab);
+            GameObject obj = Instantiate(vehiclePrefab);
+            activeVehicleCount++;
             Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
             obj.GetComponent<WaypointNavigator>().currentWaypoint = child.GetComponent<Waypoint>();
             obj.transform.position = child.position;
@@ -25,5 +32,27 @@ public class VehicleSpawner : MonoBehaviour
             yield return new WaitForEndOfFrame();
             count++;
         }
+    }
+
+    private void SpawnVehicle()
+    {
+        int count = activeVehicleCount;
+        while (count < vehicleSpawnCount)
+        {
+            GameObject obj = Instantiate(vehiclePrefab);
+            activeVehicleCount++;
+            GameObject spawnPoint = vehicleSpawnPoints[Random.Range(0, (vehicleSpawnPoints.Length - 1))];
+            obj.GetComponent<WaypointNavigator>().currentWaypoint = spawnPoint.GetComponent<Waypoint>();
+            obj.transform.position = spawnPoint.transform.position;
+            count++;
+        }
+        
+    }
+
+    private void DespawnEvent(VehicleDespawnEvent eve)
+    {
+        activeVehicleCount--;
+        SpawnVehicle();
+        print(eve.Description);
     }
 }

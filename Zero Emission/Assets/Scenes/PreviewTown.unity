@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1516622522}
   nextWaypoint: {fileID: 1054923701}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &708171
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1470845114}
   nextWaypoint: {fileID: 1597294586}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &9474581
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 196761651}
   nextWaypoint: {fileID: 1327516322}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &144973207
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 214377201}
   nextWaypoint: {fileID: 144973206}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &196761652
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 2093639650}
   nextWaypoint: {fileID: 1470845114}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &201347605
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1054923701}
   nextWaypoint: {fileID: 196761651}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &214377202
@@ -880,7 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 688560557}
   nextWaypoint: {fileID: 566553758}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &233997244
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1725288349}
   nextWaypoint: {fileID: 861517138}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &330061788
@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 926174972}
   nextWaypoint: {fileID: 377314766}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &364526968
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 364526967}
   nextWaypoint: {fileID: 722978661}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &377314767
@@ -1409,7 +1409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1651327908}
   nextWaypoint: {fileID: 2010782494}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &438484251
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 542749805}
   nextWaypoint: {fileID: 1590143211}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &475426226
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 847794514}
   nextWaypoint: {fileID: 1651327908}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &501060469
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 2112513757}
   nextWaypoint: {fileID: 1915805603}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &526530296
@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1365720287}
   nextWaypoint: {fileID: 475426225}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &542749806
@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 233997243}
   nextWaypoint: {fileID: 1521308182}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &566553759
@@ -2410,6 +2410,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2905049438715874136, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
         type: 3}
+      propertyPath: vehicleSpawnPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905049438715874136, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
+        type: 3}
       propertyPath: pedestrianPrefab
       value: 
       objectReference: {fileID: 7175236408373907882, guid: 4be42315d26e39846a34fc65129f0384,
@@ -2419,6 +2424,22 @@ PrefabInstance:
       propertyPath: pedestrianSpawnCount
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2905049438715874136, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
+        type: 3}
+      propertyPath: vehiclePrefab
+      value: 
+      objectReference: {fileID: 7175236408373907882, guid: 4be42315d26e39846a34fc65129f0384,
+        type: 3}
+    - target: {fileID: 2905049438715874136, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
+        type: 3}
+      propertyPath: vehicleSpawnCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905049438715874136, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
+        type: 3}
+      propertyPath: vehicleSpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 233997242}
     - target: {fileID: 2905049438715874137, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
         type: 3}
       propertyPath: m_Name
@@ -2805,7 +2826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 965243976}
   nextWaypoint: {fileID: 233997243}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &688560558
@@ -3119,7 +3140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 377314766}
   nextWaypoint: {fileID: 1296052206}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &722978662
@@ -3248,7 +3269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 995709989}
   nextWaypoint: {fileID: 501060468}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &847794515
@@ -3450,7 +3471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1521308182}
   nextWaypoint: {fileID: 1819793338}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &855941893
@@ -3498,7 +3519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 330061787}
   nextWaypoint: {fileID: 1023550719}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &861517139
@@ -3546,7 +3567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 2010782494}
   nextWaypoint: {fileID: 1365720287}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &861725116
@@ -3737,7 +3758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1597294586}
   nextWaypoint: {fileID: 2126994752}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &890685892
@@ -4104,7 +4125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 2126994752}
   nextWaypoint: {fileID: 364526967}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &926174973
@@ -4350,7 +4371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1159400784}
   nextWaypoint: {fileID: 688560557}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &965243977
@@ -4433,7 +4454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1915805603}
   nextWaypoint: {fileID: 1516622522}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &981858504
@@ -4619,7 +4640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1873838226}
   nextWaypoint: {fileID: 847794514}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &995709990
@@ -4673,7 +4694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1974891324}
   nextWaypoint: {fileID: 1171941823}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1011900937
@@ -4721,7 +4742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 861517138}
   nextWaypoint: {fileID: 1846143061}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1023550720
@@ -4783,7 +4804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 708170}
   nextWaypoint: {fileID: 214377201}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!1001 &1083854108
@@ -5012,7 +5033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1369045649}
   nextWaypoint: {fileID: 1149059120}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1102611899
@@ -5129,7 +5150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1102611898}
   nextWaypoint: {fileID: 1974891324}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1149059121
@@ -5183,7 +5204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1762012905}
   nextWaypoint: {fileID: 965243976}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1159400785
@@ -5231,7 +5252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1011900936}
   nextWaypoint: {fileID: 1762012905}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1171941824
@@ -5765,7 +5786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 722978661}
   nextWaypoint: {fileID: 1873838226}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1296052207
@@ -5977,7 +5998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1590143211}
   nextWaypoint: {fileID: 1725288349}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1320231036
@@ -6025,7 +6046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 144973206}
   nextWaypoint: {fileID: 1369045649}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1327516323
@@ -6400,7 +6421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 861725115}
   nextWaypoint: {fileID: 542749805}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1365720288
@@ -6454,7 +6475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1327516322}
   nextWaypoint: {fileID: 1102611898}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1369045650
@@ -6998,7 +7019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 201347604}
   nextWaypoint: {fileID: 9474580}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1470845115
@@ -7120,7 +7141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 981858503}
   nextWaypoint: {fileID: 708170}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1516622523
@@ -7174,7 +7195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 566553758}
   nextWaypoint: {fileID: 855941892}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1521308183
@@ -7483,7 +7504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 475426225}
   nextWaypoint: {fileID: 1320231035}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1590143212
@@ -7531,7 +7552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 9474580}
   nextWaypoint: {fileID: 890685891}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1597294587
@@ -7685,7 +7706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 501060468}
   nextWaypoint: {fileID: 438484250}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1651327909
@@ -7871,7 +7892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1320231035}
   nextWaypoint: {fileID: 330061787}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1725288350
@@ -8244,7 +8265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1171941823}
   nextWaypoint: {fileID: 1159400784}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1762012906
@@ -8514,7 +8535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 855941892}
   nextWaypoint: {fileID: 2093639650}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1819793339
@@ -8530,6 +8551,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2000161836}
   m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1823449080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823449082}
+  - component: {fileID: 1823449081}
+  m_Layer: 0
+  m_Name: Despawner
+  m_TagString: Despawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1823449081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823449080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.9, y: 10.26, z: 13.28}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1823449082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823449080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -690.4, y: 3.9, z: -127.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1832669046 stripped
 Transform:
@@ -8685,7 +8750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1023550719}
   nextWaypoint: {fileID: 2112513757}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1846143062
@@ -8945,7 +9010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1296052206}
   nextWaypoint: {fileID: 995709989}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1873838227
@@ -9226,7 +9291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 526530295}
   nextWaypoint: {fileID: 981858503}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1915805604
@@ -9667,7 +9732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1149059120}
   nextWaypoint: {fileID: 1011900936}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &1974891325
@@ -9770,7 +9835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 438484250}
   nextWaypoint: {fileID: 861725115}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &2010782495
@@ -10000,7 +10065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1819793338}
   nextWaypoint: {fileID: 201347604}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &2093639651
@@ -10048,7 +10113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 1846143061}
   nextWaypoint: {fileID: 526530295}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &2112513758
@@ -10096,7 +10161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 890685891}
   nextWaypoint: {fileID: 926174972}
-  width: 5
+  width: 1.7
   branches: []
   branchRatio: 0.5
 --- !u!4 &2126994753
