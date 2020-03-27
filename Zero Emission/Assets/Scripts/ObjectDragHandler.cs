@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
+public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
     private RawImage image;
     private Vector3 originalPosition;
@@ -18,6 +18,11 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         image = GetComponent<RawImage>();
         originalPosition = transform.position;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        CameraDrag.Instance.enabled = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -52,6 +57,8 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         transform.position = originalPosition;
         instantiated = false;
         placementObject = null;
+
+        CameraDrag.Instance.enabled = true;
     }
 
     private void InstantiateBuilding()

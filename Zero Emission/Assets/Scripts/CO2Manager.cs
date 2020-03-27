@@ -75,7 +75,6 @@ public class CO2Manager : MonoBehaviour
 
     private float GetFillAmount()
     {
-        Debug.Log("fill amount: " + CO2Level / CO2MaxLevel);
         float tempMax = (float)CO2MaxLevel;
         float tempCurrent = (float)CO2Level;
         return tempCurrent / tempMax;  // because fillAmount is range 0f - 1f
