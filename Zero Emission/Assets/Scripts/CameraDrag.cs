@@ -8,6 +8,7 @@ public class CameraDrag : MonoBehaviour
 {
     public float dragSpeed = 2;
     private Vector3 dragOrigin;
+    private Vector3 cameraPosOnBeginDrag;
     public static CameraDrag Instance { get; private set; }
 
     private void Awake()
@@ -26,22 +27,33 @@ public class CameraDrag : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             dragOrigin = Input.mousePosition;
+            cameraPosOnBeginDrag = transform.position;
             return;
         }
 
-        if (!Input.GetMouseButton(0)) return;
+        if (Input.GetMouseButton(0))
+        {
+            
+            Vector3 dragDistance = dragOrigin - Input.mousePosition;
+            transform.position = cameraPosOnBeginDrag - new Vector3(dragDistance.x, 0, dragDistance.y);
 
-        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+            //code for continous movement of camera
+            /*
+            Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+            float xPos = pos.x  * (dragDistance.magnitude / 10);
+            float yPos = pos.y  * (dragDistance.magnitude / 10);
+            //Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
+            Vector3 move = new Vector3(xPos, 0, yPos);
+            transform.Translate(move, Space.World);
+            */
+        }
 
-        Vector3 dragDistance = dragOrigin - Input.mousePosition;
-        float xPos = pos.x  * (dragDistance.magnitude / 10);
-        float yPos = pos.y  * (dragDistance.magnitude / 10);
-        //Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
-        Vector3 move = new Vector3(xPos, 0, yPos);
 
-        transform.Translate(move, Space.World);
+
+
+
     }
 
-    
+
 
 }
