@@ -6,9 +6,16 @@ using UnityEngine.UI;
 
 public class CameraDrag : MonoBehaviour
 {
-    public float dragSpeed = 2;
+    [SerializeField] private float dragSpeed = 2;
+    [SerializeField] private float minHeight;
+    [SerializeField] private float maxHeight;
+    [SerializeField] private float topDownTreshhold;
+    [SerializeField] private float zoomSpeed;
+    [SerializeField] private float topDownAngle;
+
     private Vector3 dragOrigin;
     private Vector3 cameraPosOnBeginDrag;
+    private Quaternion standardRotation;
     public static CameraDrag Instance { get; private set; }
 
     private void Awake()
@@ -21,6 +28,11 @@ public class CameraDrag : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        standardRotation = gameObject.transform.rotation;
     }
     void Update()
     {
@@ -48,9 +60,43 @@ public class CameraDrag : MonoBehaviour
             */
         }
 
+        // Zoom in / zoom out
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        
+        if (scroll < 0 && gameObject.transform.position.y < maxHeight)
+        {
+            Debug.Log("scrolling < 0");
+            gameObject.transform.position += new Vector3(0f, zoomSpeed, 0f);
+        }
+        else if (scroll > 0 && gameObject.transform.position.y > minHeight)
+        {
+            Debug.Log("scrolling > 0");
+            gameObject.transform.position += new Vector3(0f, -zoomSpeed, 0f);
+        }
+        
+
+        //lerp at height treshhold. 
+        if (gameObject.transform.position.y < topDownTreshhold)
+        {
+            /*
+            Quaternion lerpTo = new Quaternion(standardRotation.x, 0f, standardRotation.z, 0);
+            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, lerpTo, 0.05f);
+            */
+
+            gameObject.transform.eulerAngles = new Vector3(topDownAngle, standardRotation.eulerAngles.y, standardRotation.eulerAngles.z);
+        }
+        else if (gameObject.transform.position.y > topDownTreshhold)
+        {
+            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, standardRotation, 0.05f);
+        }
 
 
-
+        /*
+        // rotate cam around x axis based on position.y. lower y = greater rotation
+        float aversion = maxHeight - gameObject.transform.position.y;
+        
+        gameObject.transform.rotation = new Quaternion(standardRotation.x, standardRotation.y - aversion, standardRotation.z, 0);
+        */
 
     }
 
