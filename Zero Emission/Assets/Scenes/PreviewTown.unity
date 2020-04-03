@@ -2443,7 +2443,7 @@ PrefabInstance:
     - target: {fileID: 2905049438715874136, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
         type: 3}
       propertyPath: vehicleSpawnCount
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2905049438715874136, guid: 4d71730b1bf1d2a4ba3502d1019c5299,
         type: 3}
