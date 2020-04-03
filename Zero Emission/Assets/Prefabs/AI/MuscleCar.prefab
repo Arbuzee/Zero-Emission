@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 6181426504451580857}
   - component: {fileID: 2923909387507095951}
   - component: {fileID: 8912440541820593526}
-  - component: {fileID: 1288177579077159950}
   - component: {fileID: 6039919833341003857}
   - component: {fileID: 9214547690426626435}
   - component: {fileID: 9119727151212640774}
   m_Layer: 0
   m_Name: MuscleCar
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,22 +90,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1288177579077159950
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7175236408373907882}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!65 &6039919833341003857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115,7 +98,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7175236408373907882}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.41, y: 3.17175, z: 11.01}
@@ -132,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d554e7b69e985f24594a6f266f61a0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   minSpeed: 20
   maxSpeed: 20
   rotationSpeed: 400

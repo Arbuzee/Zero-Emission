@@ -8,9 +8,11 @@ public class VehicleSpawner : MonoBehaviour
     [SerializeField] private GameObject bikePrefab;
     [SerializeField] private int vehicleSpawnCount;
     [SerializeField] GameObject[] vehicleSpawnPoints;
-    [SerializeField] private float carToBikeRatio;
+    [SerializeField] private float carToBikeDifference;
 
-    private int activeVehicleCount = 0;
+    private int activeVehicleCount { get { return activeCarCount + activeGreenCount; } }
+    private int activeCarCount;
+    private int activeGreenCount;
 
     private void Start()
     {
@@ -18,13 +20,27 @@ public class VehicleSpawner : MonoBehaviour
         EventManager.Instance.RegisterListener<VehicleDespawnEvent>(DespawnEvent);
     }
 
+    private void Update()
+    {
+        print(activeVehicleCount);
+    }
+
     IEnumerator IntialSpawn()
     {
         int count = 0;
+        GameObject obj;
         while (count < vehicleSpawnCount)
         {
-            GameObject obj = Instantiate(vehiclePrefab);
-            activeVehicleCount++;
+            if(carToBikeDifference < (activeCarCount - activeGreenCount))
+            {
+                obj = Instantiate(bikePrefab);
+                activeGreenCount++;
+            }
+            else
+            {
+                obj = Instantiate(vehiclePrefab);
+                activeCarCount++;
+            }
             Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
             obj.GetComponent<WaypointNavigator>().currentWaypoint = child.GetComponent<Waypoint>();
             obj.transform.position = child.position;
@@ -36,22 +52,37 @@ public class VehicleSpawner : MonoBehaviour
 
     private void SpawnVehicle()
     {
-        int count = activeVehicleCount;
-        while (count < vehicleSpawnCount)
+        GameObject obj;
+        while (activeVehicleCount < vehicleSpawnCount)
         {
-            GameObject obj = Instantiate(vehiclePrefab);
-            activeVehicleCount++;
+            if (carToBikeDifference < (activeCarCount - activeGreenCount))
+            {
+                obj = Instantiate(bikePrefab);
+                activeGreenCount++;
+            }
+            else
+            {
+                obj = Instantiate(vehiclePrefab);
+                activeCarCount++;
+            }
             GameObject spawnPoint = vehicleSpawnPoints[Random.Range(0, (vehicleSpawnPoints.Length - 1))];
             obj.GetComponent<WaypointNavigator>().currentWaypoint = spawnPoint.GetComponent<Waypoint>();
             obj.transform.position = spawnPoint.transform.position;
-            count++;
         }
-        
     }
 
     private void DespawnEvent(VehicleDespawnEvent eve)
     {
-        activeVehicleCount--;
+        Vehicle.VehicleType vehicleType = eve.Vehicle.type;
+        if(vehicleType == Vehicle.VehicleType.Car)
+        {
+            activeCarCount--;
+        }
+        else
+        {
+            activeGreenCount--;
+        }
+        Destroy(eve.Vehicle.gameObject);
         SpawnVehicle();
         print(eve.Description);
     }

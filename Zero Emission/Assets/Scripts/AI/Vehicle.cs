@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Vehicle : MonoBehaviour
 {
+    public enum VehicleType
+    {
+        Car, Bike, Scooter
+    }
+    public VehicleType type;
+    
     [SerializeField] private float minSpeed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float rotationSpeed;
@@ -29,7 +35,7 @@ public class Vehicle : MonoBehaviour
 
             float destinationDistance = destinationDirection.magnitude;
 
-            if(destinationDistance >= stopDistance)
+            if (destinationDistance >= stopDistance)
             {
                 reachedDestination = false;
                 Quaternion targetRotation = Quaternion.LookRotation(destinationDirection);
@@ -43,24 +49,9 @@ public class Vehicle : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Despawner"))
-        {
-            print("Despawn trigger hit");
-            Despawn();
-        }
-    }
-
     public void SetDestination(Vector3 destination)
     {
         this.destination = destination;
         reachedDestination = false;
-    }
-
-    private void Despawn()
-    {
-        EventManager.Instance.FireEvent(new VehicleDespawnEvent("Vehicle despawned"));
-        Destroy(gameObject);
     }
 }

@@ -43,6 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e39e29e5f26e046adb46675c735941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedestrianPrefab: {fileID: 6244734992195791066, guid: c77328c71935d7745b31fc7185056690,
+  vehiclePrefab: {fileID: 7175236408373907882, guid: 4be42315d26e39846a34fc65129f0384,
     type: 3}
-  pedestrianSpawnCount: 5
+  bikePrefab: {fileID: 0}
+  vehicleSpawnCount: 7
+  vehicleSpawnPoints:
+  - {fileID: 0}
+  carToBikeRatio: 0

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class VehicleDespawnEvent : EventClass
 {
-    public VehicleDespawnEvent(string description) : base(description)
+    public Vehicle Vehicle;
+
+    public VehicleDespawnEvent(string description, Vehicle vehicle) : base(description)
     {
-        
+        Vehicle = vehicle;
     }
 }
