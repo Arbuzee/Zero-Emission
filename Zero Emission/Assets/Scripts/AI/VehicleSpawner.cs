@@ -22,7 +22,7 @@ public class VehicleSpawner : MonoBehaviour
 
     private void Update()
     {
-        print(activeVehicleCount);
+        
     }
 
     IEnumerator IntialSpawn()
@@ -52,6 +52,8 @@ public class VehicleSpawner : MonoBehaviour
 
     private void SpawnVehicle()
     {
+        print(activeVehicleCount);
+
         GameObject obj;
         while (activeVehicleCount < vehicleSpawnCount)
         {

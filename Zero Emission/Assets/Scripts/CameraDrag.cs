@@ -75,15 +75,14 @@ public class CameraDrag : MonoBehaviour
         }
         
 
-        //lerp at height treshhold. 
+        //lerp camera at height treshhold. 
         if (gameObject.transform.position.y < topDownTreshhold)
         {
-            /*
-            Quaternion lerpTo = new Quaternion(standardRotation.x, 0f, standardRotation.z, 0);
-            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, lerpTo, 0.05f);
-            */
+            //create euler angles that represent desired rotation and make a quaternion out of it:
+            Quaternion topDownRotation = Quaternion.Euler(topDownAngle, standardRotation.eulerAngles.y, standardRotation.eulerAngles.z);
+            //use this quiaternion to lerp to, as euler angles does not lerp as expected...
+            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, topDownRotation, 0.05f);
 
-            gameObject.transform.eulerAngles = new Vector3(topDownAngle, standardRotation.eulerAngles.y, standardRotation.eulerAngles.z);
         }
         else if (gameObject.transform.position.y > topDownTreshhold)
         {
@@ -91,12 +90,6 @@ public class CameraDrag : MonoBehaviour
         }
 
 
-        /*
-        // rotate cam around x axis based on position.y. lower y = greater rotation
-        float aversion = maxHeight - gameObject.transform.position.y;
-        
-        gameObject.transform.rotation = new Quaternion(standardRotation.x, standardRotation.y - aversion, standardRotation.z, 0);
-        */
 
     }
 
