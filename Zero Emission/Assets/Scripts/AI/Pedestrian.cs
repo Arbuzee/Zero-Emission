@@ -5,24 +5,27 @@ using UnityEngine.AI;
 
 public class Pedestrian : MonoBehaviour
 {
-    [SerializeField] private GameObject[] waypoints;
-    [SerializeField] private float waypointDistance;
-    [SerializeField] private Vector3 currentWaypoint;
+    public GameObject waypointsRoot;
     private NavMeshAgent agent;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(waypoints[0].transform.position);
+        SetRandomDestination();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.V))
+        
+        if(agent.remainingDistance <= agent.stoppingDistance)
         {
-            agent.SetDestination(waypoints[1].transform.position);
+            SetRandomDestination();
         }
-
-        currentWaypoint = agent.destination;
     }
+
+    private void SetRandomDestination()
+    {
+        agent.SetDestination(waypointsRoot.transform.GetChild(Random.Range(0, waypointsRoot.transform.childCount - 1)).transform.position);
+    }
+
 }
