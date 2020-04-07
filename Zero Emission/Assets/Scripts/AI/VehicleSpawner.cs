@@ -52,7 +52,7 @@ public class VehicleSpawner : MonoBehaviour
 
     private void SpawnVehicle()
     {
-        print(activeVehicleCount);
+        //print(activeVehicleCount);
 
         GameObject obj;
         while (activeVehicleCount < vehicleSpawnCount)
