@@ -13,8 +13,16 @@ public class CameraDrag : MonoBehaviour
     [SerializeField] private float zoomSpeed;
     [SerializeField] private float topDownAngle;
 
+    [Header("Borders")]
+    [SerializeField] private float MaxX;
+    [SerializeField] private float MinX;
+    [SerializeField] private float MaxZ;
+    [SerializeField] private float MinZ;
+    private float bounce = 0f;
+
     private Vector3 dragOrigin;
     private Vector3 cameraPosOnBeginDrag;
+    private Vector3 cameraDirection;
     private Quaternion standardRotation;
     public static CameraDrag Instance { get; private set; }
 
@@ -36,6 +44,9 @@ public class CameraDrag : MonoBehaviour
     }
     void Update()
     {
+        //
+        
+
         if (Input.GetMouseButtonDown(0))
         {
             dragOrigin = Input.mousePosition;
@@ -43,11 +54,30 @@ public class CameraDrag : MonoBehaviour
             return;
         }
 
+        if (bounce > 0)
+        {
+            transform.position += cameraDirection * (bounce*5) * Time.deltaTime;
+            bounce -= Time.deltaTime;
+            return;
+        }
+
         if (Input.GetMouseButton(0))
         {
+
+            //check
+            if (bounce <= 0 && MinX <= gameObject.transform.position.x && gameObject.transform.position.x <= MaxX && MinZ <= gameObject.transform.position.z && gameObject.transform.position.z <= MaxZ)
+            {
+                Vector3 dragDistance = dragOrigin - Input.mousePosition;
+                cameraDirection = new Vector3(dragDistance.x, 0, dragDistance.y);
+                transform.position = cameraPosOnBeginDrag - cameraDirection;
+            }
+
+            else {
+                bounce = 0.6f;
+            }
             
-            Vector3 dragDistance = dragOrigin - Input.mousePosition;
-            transform.position = cameraPosOnBeginDrag - new Vector3(dragDistance.x, 0, dragDistance.y);
+            
+            
 
             //code for continous movement of camera
             /*
