@@ -19,11 +19,13 @@ public class CameraDrag : MonoBehaviour
     [SerializeField] private float MaxZ;
     [SerializeField] private float MinZ;
     private float bounce = 0f;
+    
 
     private Vector3 dragOrigin;
     private Vector3 cameraPosOnBeginDrag;
-    private Vector3 cameraDirection;
+    private Vector3 cameraDragDirection;
     private Quaternion standardRotation;
+    private float cameraGlideMagnitude;
     public static CameraDrag Instance { get; private set; }
 
     private void Awake()
@@ -44,8 +46,8 @@ public class CameraDrag : MonoBehaviour
     }
     void Update()
     {
-        //
-        
+
+       
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -54,11 +56,26 @@ public class CameraDrag : MonoBehaviour
             return;
         }
 
+        if (Input.GetMouseButtonUp(0)) {
+            cameraGlideMagnitude = cameraDragDirection.magnitude; //for glide when cam is let go
+        }
+
+        //cam is bouncing currently
         if (bounce > 0)
         {
-            transform.position += cameraDirection * (bounce*5) * Time.deltaTime;
+            transform.position += cameraDragDirection * (bounce * 5) * Time.deltaTime;
             bounce -= Time.deltaTime;
+            /*
+            if (bounce < 0.05f) {
+                cameraDragDirection.Normalize();
+            }
+            */
+
             return;
+        }
+        else {
+            transform.position -= cameraDragDirection.normalized * cameraGlideMagnitude * Time.deltaTime;
+            cameraGlideMagnitude *= 0.96f;
         }
 
         if (Input.GetMouseButton(0))
@@ -68,12 +85,15 @@ public class CameraDrag : MonoBehaviour
             if (bounce <= 0 && MinX <= gameObject.transform.position.x && gameObject.transform.position.x <= MaxX && MinZ <= gameObject.transform.position.z && gameObject.transform.position.z <= MaxZ)
             {
                 Vector3 dragDistance = dragOrigin - Input.mousePosition;
-                cameraDirection = new Vector3(dragDistance.x, 0, dragDistance.y);
-                transform.position = cameraPosOnBeginDrag - cameraDirection;
+                cameraDragDirection = new Vector3(dragDistance.x, 0, dragDistance.y);
+                cameraDragDirection *= (gameObject.transform.position.y / 250);
+                transform.position = cameraPosOnBeginDrag - cameraDragDirection;
+                
             }
 
             else {
-                bounce = 0.6f;
+                bounce = 0.5f;
+                cameraGlideMagnitude = 0;
             }
             
             
