@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CO2Manager : MonoBehaviour
 {
-    private Image CO2Indikator;
+    private Image CO2Indicator;
+    [SerializeField] private TextMeshProUGUI CO2PercentageText;
 
     private int co2Level = 100;
+
     public int CO2MaxLevel { get; set; }
     public int CO2Level { get => co2Level; set => co2Level = value; } //nessecary when UI gets own script and must access co2lvl.
     
@@ -29,12 +32,11 @@ public class CO2Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CO2Indikator = GetComponent<Image>();
-        CO2Indikator.type = Image.Type.Filled;
-        CO2Indikator.fillMethod = Image.FillMethod.Vertical;
-        CO2Indikator.fillAmount = 1f;
+        CO2Indicator = GetComponent<Image>();
+        CO2Indicator.type = Image.Type.Filled;
+        CO2Indicator.fillMethod = Image.FillMethod.Vertical;
+        CO2Indicator.fillAmount = 1f;
         EventManager.Instance.RegisterListener<CO2Change>(OnCO2Change);
-        
     }
 
     public void Update()
@@ -57,6 +59,7 @@ public class CO2Manager : MonoBehaviour
     {
         Debug.Log("building drop co2 value: " + ev.CO2AdjustmentValue);
         UpdateCo2Level(ev.CO2AdjustmentValue); // adjustment value gives a positive amount is new building swapped out a green one
+        UpdateCo2PercentageText();
     }
 
     public void UpdateCo2Level(int value)
@@ -67,10 +70,15 @@ public class CO2Manager : MonoBehaviour
         FillCo2Indicator();
     }
 
+    public void UpdateCo2PercentageText()
+    {
+        CO2PercentageText.text = "CO2: " + Mathf.Ceil(GetFillAmount() * 100) + "%";
+    }
+
     private void FillCo2Indicator()
     {
         Debug.Log("filling co2 meter");
-        CO2Indikator.fillAmount = GetFillAmount();
+        CO2Indicator.fillAmount = GetFillAmount();
     }
 
     private float GetFillAmount()
