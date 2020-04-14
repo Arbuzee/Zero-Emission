@@ -9,7 +9,7 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, I
     private RawImage image;
     private Vector3 originalPosition;
     [SerializeField] private GameObject building;
-    [SerializeField] private RectTransform panel;
+    private RectTransform panel;
     private GameObject placementObject;
     private bool instantiated = false;
     [SerializeField] private LayerMask layerMask;
@@ -18,6 +18,7 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, I
     {
         image = GetComponent<RawImage>();
         originalPosition = transform.position;
+        panel = transform.parent.GetComponent<RectTransform>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)

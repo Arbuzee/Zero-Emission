@@ -1,18 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ObjectInfoManager : MonoBehaviour
+public class ObjectInfoManager : MonoBehaviour, IPointerClickHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject PopupWindow;
+    [SerializeField] private float popUpTime;
+    [SerializeField] private string title;
+    [TextArea(15,15)]
+    [SerializeField] private string description;
+
+
+
+    public void OnPointerClick(PointerEventData eventData)
     {
-        
+        ShowPopupWindow();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ShowPopupWindow()
     {
-        
+        print("Showing popup");
+        GameObject obj = Instantiate(PopupWindow, transform.root);
+        obj.GetComponent<PopupHandler>().titleText.text = title;
+        obj.GetComponent<PopupHandler>().descriptionText.text = description;
+        obj.transform.position = Input.mousePosition;
     }
 }
