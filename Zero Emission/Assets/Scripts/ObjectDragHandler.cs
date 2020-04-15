@@ -21,9 +21,26 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, I
         panel = transform.parent.GetComponent<RectTransform>();
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) {
+            if (RectTransformUtility.RectangleContainsScreenPoint(transform.parent.GetComponent<RectTransform>(), Input.mousePosition))
+            {
+                CameraDrag.Instance.enabled = false;
+            }
+        }
+        
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+
         CameraDrag.Instance.enabled = false;
+        /*
+        if (!RectTransformUtility.RectangleContainsScreenPoint(panel, Input.mousePosition)) {
+            CameraDrag.Instance.enabled = true;
+        }
+        */
     }
 
     public void OnDrag(PointerEventData eventData)

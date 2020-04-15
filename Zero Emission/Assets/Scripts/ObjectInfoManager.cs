@@ -13,7 +13,6 @@ public class ObjectInfoManager : MonoBehaviour, IPointerClickHandler
     [SerializeField] private string description;
 
 
-
     public void OnPointerClick(PointerEventData eventData)
     {
         ShowPopupWindow();

@@ -63,6 +63,8 @@ public class PlacementArea : MonoBehaviour
             CO2Rating = newBuilding.GetComponent<Building>().CO2Rating - currentBuilding.GetComponent<Building>().CO2Rating;
             Destroy(currentBuilding);
             currentBuilding = newBuilding;
+            //send event (some functionality here can maybe be moved to better fitting scripts listening for this event instead)
+            EventManager.Instance.FireEvent(new BuildingSwapEvent("buildings swapped", currentBuilding, newBuilding));
         }
 
         //send CO2-change event

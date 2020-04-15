@@ -144,5 +144,11 @@ public class CameraDrag : MonoBehaviour
     }
 
 
+    private void OnDisable()
+    {
+        cameraGlideMagnitude = 0;
+    }
+
+
 
 }
