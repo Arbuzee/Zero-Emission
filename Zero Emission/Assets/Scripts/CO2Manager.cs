@@ -8,6 +8,10 @@ public class CO2Manager : MonoBehaviour
 {
     private Image CO2Indicator;
     [SerializeField] private TextMeshProUGUI CO2PercentageText;
+    [SerializeField] private GameObject Co2UpObject;
+    [SerializeField] private GameObject Co2DownObject;
+    private Animation Co2UpArrowAnimation;
+    private Animation Co2DownArrowAnimation;
 
     private int co2Level = 100;
 
@@ -37,6 +41,8 @@ public class CO2Manager : MonoBehaviour
         CO2Indicator.fillMethod = Image.FillMethod.Vertical;
         CO2Indicator.fillAmount = 1f;
         EventManager.Instance.RegisterListener<CO2Change>(OnCO2Change);
+        Co2UpArrowAnimation = Co2UpObject.GetComponent<Animation>();
+        Co2DownArrowAnimation = Co2DownObject.GetComponent<Animation>();
     }
 
     public void Update()
@@ -47,6 +53,10 @@ public class CO2Manager : MonoBehaviour
             Debug.Log("keypress");
             UpdateCo2Level(-5);
             FillCo2Indicator();
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Co2UpArrowAnimation.Play();
         }
     }
 
@@ -60,6 +70,10 @@ public class CO2Manager : MonoBehaviour
         Debug.Log("building drop co2 value: " + ev.CO2AdjustmentValue);
         UpdateCo2Level(ev.CO2AdjustmentValue); // adjustment value gives a positive amount is new building swapped out a green one
         UpdateCo2PercentageText();
+        if (ev.CO2AdjustmentValue > 0)
+            Co2UpArrowAnimation.Play();
+        else if (ev.CO2AdjustmentValue < 0)
+            Co2DownArrowAnimation.Play();
     }
 
     public void UpdateCo2Level(int value)
