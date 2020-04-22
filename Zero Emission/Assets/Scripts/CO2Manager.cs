@@ -7,6 +7,7 @@ using TMPro;
 public class CO2Manager : MonoBehaviour
 {
     private Image CO2Indicator;
+    [SerializeField] private float MeterFillSpeed;
     [SerializeField] private TextMeshProUGUI CO2PercentageText;
     [SerializeField] private GameObject Co2UpObject;
     [SerializeField] private GameObject Co2DownObject;
@@ -47,6 +48,7 @@ public class CO2Manager : MonoBehaviour
 
     public void Update()
     {
+        FillCo2Indicator();
         //Just for testing
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -54,10 +56,7 @@ public class CO2Manager : MonoBehaviour
             UpdateCo2Level(-5);
             FillCo2Indicator();
         }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Co2UpArrowAnimation.Play();
-        }
+        
     }
 
     /// <summary>
@@ -91,8 +90,7 @@ public class CO2Manager : MonoBehaviour
 
     private void FillCo2Indicator()
     {
-        Debug.Log("filling co2 meter");
-        CO2Indicator.fillAmount = GetFillAmount();
+        CO2Indicator.fillAmount = Mathf.Lerp(CO2Indicator.fillAmount, GetFillAmount(), Time.deltaTime * MeterFillSpeed);
     }
 
     private float GetFillAmount()
@@ -108,5 +106,4 @@ public class CO2Manager : MonoBehaviour
         CO2Level = CO2MaxLevel;
         Debug.Log("Max Co2 lvl is: " + CO2MaxLevel);
     }
-
 }

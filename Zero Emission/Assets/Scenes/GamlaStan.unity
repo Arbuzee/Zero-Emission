@@ -6041,29 +6041,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 344829941}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &347121993 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7579367534361103378, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &347121994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347121993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PopupWindow: {fileID: 1061971923395695212, guid: 262a1fd9b58677b489a90405b0db1d7b,
-    type: 3}
-  popUpTime: 1
-  title: Wind Turbine
-  description: Swooosh
 --- !u!1 &353363896
 GameObject:
   m_ObjectHideFlags: 0
@@ -16374,57 +16351,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 906463015, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: CO2PercentageText
-      value: 
-      objectReference: {fileID: 1018412541}
+      propertyPath: MeterFillSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 906463016, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
       propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957211341492208820, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.3999939
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4627179712688048841, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7579367534855265954, guid: 0c334c3b9a4051649aee0114f638031e,
         type: 3}
@@ -18382,6 +18314,36 @@ Transform:
   m_Father: {fileID: 144437503}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -16.067001, z: 0}
+--- !u!1 &981233909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1187089800}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981233910}
+  m_Layer: 0
+  m_Name: Birger Jarls torg05 (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981233910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1187089800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981233909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &986561173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18823,18 +18785,6 @@ Transform:
   m_Father: {fileID: 144437503}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: -13.585001, z: 0}
---- !u!114 &1018412541 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2805688392689518903, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1026645130
 GameObject:
   m_ObjectHideFlags: 0
