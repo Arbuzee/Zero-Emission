@@ -6,7 +6,7 @@ using UnityEngine;
 public class Building : PlaceableObject
 {
     private Collider boxCollider;
-
+    public string TypeOfBuilding;
     
 
     private void Start()
