@@ -252,6 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 2
   co2Rating: 15
+  TypeOfBuilding: LargeFlats2
 --- !u!1 &6244351143283302954
 GameObject:
   m_ObjectHideFlags: 0

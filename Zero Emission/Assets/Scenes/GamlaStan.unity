@@ -6209,6 +6209,10 @@ MonoBehaviour:
   currentObjective: {fileID: 0}
   QuestObject: {fileID: 3084042041114164646, guid: f5943544b04f31a458860c7444223880,
     type: 3}
+  BuildingTypes:
+  - WindTurbine
+  - YellowApartments
+  - LargeFlats
 --- !u!1001 &375467117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14709,7 +14713,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -10, y: -50}
-  m_SizeDelta: {x: 180, y: 70}
+  m_SizeDelta: {x: 200, y: 90}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &765882552
 MonoBehaviour:
@@ -18902,7 +18906,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 190, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1007914098
 MonoBehaviour:
@@ -36964,7 +36968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1985665858}
   m_Layer: 0
-  m_Name: FunctionalityUtility
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

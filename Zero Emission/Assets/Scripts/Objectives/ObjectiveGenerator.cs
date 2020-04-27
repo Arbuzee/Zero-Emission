@@ -7,6 +7,8 @@ public class ObjectiveGenerator : MonoBehaviour
 
     public GameObject currentObjective;
     public GameObject QuestObject;
+    public string[] BuildingTypes;
+
     
     public static ObjectiveGenerator Instance { get; private set; }
 
@@ -47,12 +49,18 @@ public class ObjectiveGenerator : MonoBehaviour
 
     private Objective GenerateObjectiveData() {
 
-        //example quest
-        string description = "Add one windturbine";
-        string type = "WindTurbine";
-        int count = 3;
-        
+        //generate random quest
+        string type = GetRandomBuildingType();
+        int count = Random.Range(0, 4);
+        string description = "Build " + count + " " + type;
         return new Objective(description, type, count);
+    }
+
+
+    private string GetRandomBuildingType() {
+        int randomizer = Random.Range(0, BuildingTypes.Length);
+        string str = BuildingTypes[randomizer];
+        return str;
     }
 
 }
