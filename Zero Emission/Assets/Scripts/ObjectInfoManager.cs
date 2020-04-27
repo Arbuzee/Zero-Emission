@@ -6,18 +6,22 @@ using UnityEngine.UI;
 
 public class ObjectInfoManager : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private GameObject PopupWindow;
+
     [SerializeField] private float popUpTime;
     [SerializeField] private string title;
-    [TextArea(15,15)]
+    [TextArea(15, 15)]
     [SerializeField] private string description;
-
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        ShowPopupWindow();
+
+        PopUpManager.Instance.ShowPopupWindow(title, description, popUpTime, Input.mousePosition);
+
+        //ShowPopupWindow();
     }
 
+
+    /*
     private void ShowPopupWindow()
     {
         print("Showing popup");
@@ -26,4 +30,5 @@ public class ObjectInfoManager : MonoBehaviour, IPointerClickHandler
         obj.GetComponent<PopupHandler>().descriptionText.text = description;
         obj.transform.position = Input.mousePosition;
     }
+    */
 }

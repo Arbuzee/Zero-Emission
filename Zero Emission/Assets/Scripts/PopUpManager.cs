@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class PopUpManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject PopupWindow;
+   
+
+    public static PopUpManager Instance;
+
+    private void Awake()
     {
-        EventManager.Instance.RegisterListener<BuildingSwapEvent>(OnBuildingSwap);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else {
+            Destroy(this);
+        }
     }
 
-
-    private void OnBuildingSwap(BuildingSwapEvent eve) {
-
-        //instantiate or activate UI panel with swap information
-
-
-        Debug.Log(eve.oldBuilding + " was swapped for: " + eve.newBuilding);
-    }
-
-    // Update is called once per frame
-    void Update()
+    public void ShowPopupWindow(string title, string description, float time, Vector3 position)
     {
-        
+        print("Showing popup");
+        GameObject obj = Instantiate(PopupWindow);
+        obj.GetComponent<PopupHandler>().titleText.text = title;
+        obj.GetComponent<PopupHandler>().descriptionText.text = description;
+        obj.transform.position = position;
     }
+
+   
+    
 }

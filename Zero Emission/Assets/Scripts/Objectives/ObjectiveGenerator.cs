@@ -51,7 +51,7 @@ public class ObjectiveGenerator : MonoBehaviour
 
         //generate random quest
         string type = GetRandomBuildingType();
-        int count = Random.Range(0, 4);
+        int count = Random.Range(1, 4);
         string description = "Build " + count + " " + type;
         return new Objective(description, type, count);
     }

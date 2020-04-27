@@ -57,6 +57,7 @@ public class ObjectivePrinter : MonoBehaviour
 
             if (progressCount == currentObjective.count) {
                 Debug.Log("Objective finished!");
+                PopUpManager.Instance.ShowPopupWindow("Objective finished", "Good job!", 5.0f, Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 10f)));
                 gameObject.GetComponent<Text>().text = "Objective Finished!";
                 NewObjective();
                 PrintObjective();

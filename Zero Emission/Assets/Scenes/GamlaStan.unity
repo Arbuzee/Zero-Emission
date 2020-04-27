@@ -16535,6 +16535,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 347121994, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
+      propertyPath: title
+      value: titlle
+      objectReference: {fileID: 0}
+    - target: {fileID: 347121994, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
+      propertyPath: description
+      value: wooosh
+      objectReference: {fileID: 0}
+    - target: {fileID: 347121994, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
+      propertyPath: popUpTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1613006586162859873, guid: 0c334c3b9a4051649aee0114f638031e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -40019,6 +40031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8543f776eb728184a868a72d7e05cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PopupWindow: {fileID: 1061971923395695212, guid: 262a1fd9b58677b489a90405b0db1d7b,
+    type: 3}
 --- !u!4 &2086042792
 Transform:
   m_ObjectHideFlags: 0
