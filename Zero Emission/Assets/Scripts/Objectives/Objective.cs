@@ -6,12 +6,12 @@ public class Objective : MonoBehaviour
 {
 
     public string description;
-    public string type;
+    public string typeToBuild;
     public int count;
 
     public Objective(string desc, string type, int count) {
         description = desc;
-        this.type = type;
+        typeToBuild = type;
         this.count = count;
     }
 
@@ -21,7 +21,7 @@ public class Objective : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // Update is called once per frame. Keep this as instantiated objective should check its own requirements and call printer to fix if more complex.
     void Update()
     {
         

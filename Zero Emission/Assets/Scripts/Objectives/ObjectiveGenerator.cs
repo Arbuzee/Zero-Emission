@@ -10,10 +10,22 @@ public class ObjectiveGenerator : MonoBehaviour
     
     public static ObjectiveGenerator Instance { get; private set; }
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject); //only one may live
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        CreateObjective();
+        
     }
 
     // Update is called once per frame
@@ -26,16 +38,19 @@ public class ObjectiveGenerator : MonoBehaviour
     public GameObject CreateObjective() {
 
         currentObjective = Instantiate(QuestObject);
-        //currentObjective.GetComponent<Objective>() = GenerateObjectiveData();
+        Objective data = GenerateObjectiveData();
+        currentObjective.GetComponent<Objective>().typeToBuild = data.typeToBuild;
+        currentObjective.GetComponent<Objective>().count = data.count;
         return currentObjective;
     }
 
 
     private Objective GenerateObjectiveData() {
 
-        string description = "add one windturbine";
+        //example quest
+        string description = "Add one windturbine";
         string type = "WindTurbine";
-        int count = 1;
+        int count = 3;
         
         return new Objective(description, type, count);
     }
