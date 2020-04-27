@@ -21,16 +21,13 @@ public class ObjectivePrinter : MonoBehaviour
     {
         txt = gameObject.GetComponent<Text>();
         EventManager.Instance.RegisterListener<BuildingSwapEvent>(OnBuildingSwap);
+        /*
         CurrentObjectiveObj = ObjectiveGenerator.Instance.CreateObjective();
         currentObjective = CurrentObjectiveObj.GetComponent<Objective>();
         progressCount = 0;
+        */
+        NewObjective();
         PrintObjective();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 
@@ -38,6 +35,13 @@ public class ObjectivePrinter : MonoBehaviour
         string questText = "";
         questText += currentObjective.description + " Type: " + currentObjective.typeToBuild + " Progress: " + progressCount + "/" + currentObjective.count;
         gameObject.GetComponent<Text>().text = questText;
+    }
+
+
+    private void NewObjective(){
+        CurrentObjectiveObj = ObjectiveGenerator.Instance.CreateObjective();
+        currentObjective = CurrentObjectiveObj.GetComponent<Objective>();
+        progressCount = 0;
     }
 
     private void OnBuildingSwap(BuildingSwapEvent eve) {
@@ -54,6 +58,8 @@ public class ObjectivePrinter : MonoBehaviour
             if (progressCount == currentObjective.count) {
                 Debug.Log("Objective finished!");
                 gameObject.GetComponent<Text>().text = "Objective Finished!";
+                NewObjective();
+                PrintObjective();
             }
         }
     }
