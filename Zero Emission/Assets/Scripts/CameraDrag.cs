@@ -26,6 +26,7 @@ public class CameraDrag : MonoBehaviour
     private Vector3 cameraDragDirection;
     private Quaternion standardRotation;
     private float cameraGlideMagnitude;
+    private Vector3 mousePosition;
     public static CameraDrag Instance { get; private set; }
 
     private void Awake()
@@ -57,14 +58,24 @@ public class CameraDrag : MonoBehaviour
         }
 
         if (Input.GetMouseButtonUp(0)) {
-            cameraGlideMagnitude = cameraDragDirection.magnitude; //for glide when cam is let go
+            
+            //if mouse position is very different from position last frame, let camera glide, if rather still, stop camera.
+            Vector3 newMousePosition = Input.mousePosition;
+            if (Vector3.Distance(mousePosition, newMousePosition) > 0.2f) {
+                cameraGlideMagnitude = cameraDragDirection.magnitude; //for glide when cam is let go
+            }
         }
+
+        //get mouse position
+        mousePosition = Input.mousePosition;
 
         //cam is bouncing currently
         if (bounce > 0)
         {
-            transform.position += cameraDragDirection * (bounce * 5) * Time.deltaTime;
+            transform.position += cameraDragDirection * (bounce * 3) * Time.deltaTime;
             bounce -= Time.deltaTime;
+            //so that camera does not glide after bounce is finished.
+            cameraGlideMagnitude = 0;
             /*
             if (bounce < 0.05f) {
                 cameraDragDirection.Normalize();
@@ -75,7 +86,7 @@ public class CameraDrag : MonoBehaviour
         }
         else {
             transform.position -= cameraDragDirection.normalized * cameraGlideMagnitude * Time.deltaTime;
-            cameraGlideMagnitude *= 0.96f;
+            cameraGlideMagnitude *= 0.95f;
         }
 
         if (Input.GetMouseButton(0))
@@ -97,17 +108,6 @@ public class CameraDrag : MonoBehaviour
             }
             
             
-            
-
-            //code for continous movement of camera
-            /*
-            Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-            float xPos = pos.x  * (dragDistance.magnitude / 10);
-            float yPos = pos.y  * (dragDistance.magnitude / 10);
-            //Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
-            Vector3 move = new Vector3(xPos, 0, yPos);
-            transform.Translate(move, Space.World);
-            */
         }
 
         // Zoom in / zoom out
@@ -132,14 +132,12 @@ public class CameraDrag : MonoBehaviour
             Quaternion topDownRotation = Quaternion.Euler(topDownAngle, standardRotation.eulerAngles.y, standardRotation.eulerAngles.z);
             //use this quiaternion to lerp to, as euler angles does not lerp as expected...
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, topDownRotation, 0.05f);
-
         }
+
         else if (gameObject.transform.position.y > topDownTreshhold)
         {
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, standardRotation, 0.05f);
         }
-
-
 
     }
 
