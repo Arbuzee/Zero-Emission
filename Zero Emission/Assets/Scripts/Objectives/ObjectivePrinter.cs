@@ -44,6 +44,15 @@ public class ObjectivePrinter : MonoBehaviour
         progressCount = 0;
     }
 
+    private void ObjectiveSuccess() {
+        Debug.Log("Objective finished!");
+        string description = currentObjective.description + "You placed " + progressCount + "/" + currentObjective.count + " buildings of type: " + currentObjective.typeToBuild + ", Good job!";
+        PopUpManager.Instance.ShowPopupWindow("Objective finished", description, 5.0f, Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 10f)));
+        gameObject.GetComponent<Text>().text = "Objective Finished!";
+        NewObjective();
+        PrintObjective();
+    }
+
     private void OnBuildingSwap(BuildingSwapEvent eve) {
 
         //get wanted building
@@ -56,11 +65,7 @@ public class ObjectivePrinter : MonoBehaviour
             PrintObjective(); // update quest text for player
 
             if (progressCount == currentObjective.count) {
-                Debug.Log("Objective finished!");
-                PopUpManager.Instance.ShowPopupWindow("Objective finished", "Good job!", 5.0f, Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 10f)));
-                gameObject.GetComponent<Text>().text = "Objective Finished!";
-                NewObjective();
-                PrintObjective();
+                ObjectiveSuccess();
             }
         }
     }

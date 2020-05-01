@@ -23,10 +23,10 @@ public class PopUpManager : MonoBehaviour
     public void ShowPopupWindow(string title, string description, float time, Vector3 position)
     {
         print("Showing popup");
-        GameObject obj = Instantiate(PopupWindow);
+        GameObject obj = Instantiate(PopupWindow, gameObject.transform);
         obj.GetComponent<PopupHandler>().titleText.text = title;
         obj.GetComponent<PopupHandler>().descriptionText.text = description;
-        obj.transform.position = position;
+        Debug.Log("position: " + position);
     }
 
    
