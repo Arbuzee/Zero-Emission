@@ -3271,7 +3271,9 @@ MonoBehaviour:
     type: 3}
   bikePrefab: {fileID: 4170722508311173818, guid: b587cd57cf3e1b54f89703826486c421,
     type: 3}
-  vehicleSpawnCount: 100
+  maxVehicleCount: 100
+  carMax: 50
+  bikeMax: 50
   vehicleSpawnPoints:
   - {fileID: 636461578}
   - {fileID: 990286129}
@@ -6189,7 +6191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1985665858}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &365890482
 MonoBehaviour:
@@ -6208,8 +6210,9 @@ MonoBehaviour:
     type: 3}
   BuildingTypes:
   - WindTurbine
-  - YellowApartments
-  - LargeFlats
+  - SmartPark
+  - DroneHub
+  - BicycleStand
 --- !u!1001 &375467117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16685,6 +16688,17 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 550
       objectReference: {fileID: 0}
+    - target: {fileID: 7579367534524933377, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 6938838451873085677, guid: f289a7a8598a8e549857185fc82882f8,
+        type: 3}
+    - target: {fileID: 7579367534524933378, guid: 0c334c3b9a4051649aee0114f638031e,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 7470d63a5100ac14d9a52360573abce3, type: 3}
     - target: {fileID: 7579367534855265954, guid: 0c334c3b9a4051649aee0114f638031e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33509,6 +33523,26 @@ Transform:
   m_Father: {fileID: 144437503}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: -112.63701, z: 0}
+--- !u!1 &1856804825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7579367534855265958, guid: 0c334c3b9a4051649aee0114f638031e,
+    type: 3}
+  m_PrefabInstance: {fileID: 857359731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1856804831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856804825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8543f776eb728184a868a72d7e05cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopupWindow: {fileID: 1061971923395695212, guid: 262a1fd9b58677b489a90405b0db1d7b,
+    type: 3}
 --- !u!1001 &1870607231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37342,7 +37376,6 @@ Transform:
   - {fileID: 1207838853}
   - {fileID: 1617509967}
   - {fileID: 2083810574}
-  - {fileID: 2086042792}
   - {fileID: 365890481}
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -40344,51 +40377,6 @@ Transform:
   m_Father: {fileID: 144437503}
   m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 70.042, z: 0}
---- !u!1 &2086042790
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2086042792}
-  - component: {fileID: 2086042791}
-  m_Layer: 0
-  m_Name: PopUpManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2086042791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086042790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8543f776eb728184a868a72d7e05cb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PopupWindow: {fileID: 1061971923395695212, guid: 262a1fd9b58677b489a90405b0db1d7b,
-    type: 3}
---- !u!4 &2086042792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086042790}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -510.52374, y: 2.844757, z: -9.609314}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1985665858}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2086808730
 PrefabInstance:
   m_ObjectHideFlags: 0
