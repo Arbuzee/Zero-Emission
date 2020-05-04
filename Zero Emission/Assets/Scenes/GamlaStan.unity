@@ -3273,9 +3273,13 @@ MonoBehaviour:
     type: 3}
   autonomousCarPrefab: {fileID: 6091628113077085444, guid: d735dd293fc915046b212ebf37b7d647,
     type: 3}
-  maxVehicleCount: 100
+  garbageTruckPrefab: {fileID: 1190288171902087119, guid: 62a27caa232d8624789cb3acebc35072,
+    type: 3}
+  maxVehicleCount: 120
   carMax: 50
   bikeMax: 50
+  autonomousCarMax: 10
+  garbageTruckMax: 10
   vehicleSpawnPoints:
   - {fileID: 636461578}
   - {fileID: 990286129}

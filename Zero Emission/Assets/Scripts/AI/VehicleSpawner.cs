@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
+    [Header("Types of vehicles")]
     [SerializeField] private GameObject vehiclePrefab;
     [SerializeField] private GameObject bikePrefab;
     [SerializeField] private GameObject autonomousCarPrefab;
-    [SerializeField] private int maxVehicleCount;
+    [SerializeField] private GameObject garbageTruckPrefab;
+    [Header("Max number of each type")]
+    [SerializeField] private int maxVehicleCount; // this is kinda useless in inspector. define this via the subtypes of vehicles.
     [SerializeField] private int carMax;
     [SerializeField] private int bikeMax;
+    [SerializeField] private int autonomousCarMax;
+    [SerializeField] private int garbageTruckMax;
+
     [SerializeField] GameObject[] vehicleSpawnPoints;
     //idea: fetch ratios and such variables from vehicleMixManager. 
     [SerializeField] private float carToBikeDifference;
 
-    private int activeVehicleCount { get { return activeCarCount + activeBikeCount + activeGarbagetruckCount; } }
-    //types of vehicles
+    private int activeVehicleCount { get { return activeCarCount + activeBikeCount + activeGarbagetruckCount + activeAutonomousCarCount; } }
     private int activeCarCount;
     private int activeBikeCount;
+    private int activeAutonomousCarCount;
     private int activeGarbagetruckCount;
     
 
@@ -34,11 +40,7 @@ public class VehicleSpawner : MonoBehaviour
     // that affect vehicles do a call here on "drop"/Start() when instantiated in world.
     private void OnBuildingSwap(BuildingSwapEvent eve)
     {
-        //if a bicycle stand was added, increase proportion of bikes on roads.
-        if (eve.newBuilding.GetComponent<Building>().TypeOfBuilding.Equals("BicycleStand")) {
-           
-        }
-
+        
         string inBuilding = eve.newBuilding.GetComponent<Building>().TypeOfBuilding;
         switch (inBuilding)
         {
@@ -108,6 +110,14 @@ public class VehicleSpawner : MonoBehaviour
                 InstantiateVehicle(ref vehiclePrefab);
                 activeCarCount++;
             }
+            else if (activeAutonomousCarCount < autonomousCarMax) {
+                InstantiateVehicle(ref autonomousCarPrefab);
+                activeAutonomousCarCount++;
+            }
+            else if (activeGarbagetruckCount < garbageTruckMax) {
+                InstantiateVehicle(ref garbageTruckPrefab);
+                activeGarbagetruckCount++;
+            }
             
             yield return new WaitForEndOfFrame();
             count++;
@@ -141,6 +151,16 @@ public class VehicleSpawner : MonoBehaviour
 
             Debug.Log("spawn vehicle: " + activeVehicleCount + " Type: " + randomInt);
 
+            if (activeAutonomousCarCount < autonomousCarMax) //Old control: carToBikeDifference < (activeCarCount - activeBikeCount)
+            {
+                InstantiateVehicle(ref autonomousCarPrefab);
+                activeAutonomousCarCount++;
+            }
+            if (activeGarbagetruckCount < garbageTruckMax) //Old control: carToBikeDifference < (activeCarCount - activeBikeCount)
+            {
+                InstantiateVehicle(ref garbageTruckPrefab);
+                activeGarbagetruckCount++;
+            }
         }
     }
 
