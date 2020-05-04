@@ -3271,6 +3271,8 @@ MonoBehaviour:
     type: 3}
   bikePrefab: {fileID: 4170722508311173818, guid: b587cd57cf3e1b54f89703826486c421,
     type: 3}
+  autonomousCarPrefab: {fileID: 6091628113077085444, guid: d735dd293fc915046b212ebf37b7d647,
+    type: 3}
   maxVehicleCount: 100
   carMax: 50
   bikeMax: 50
