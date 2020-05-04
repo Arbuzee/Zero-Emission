@@ -881,8 +881,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 2
-  co2Rating: 5
-  TypeOfBuilding: LargeFlats
+  co2Rating: 40
+  TypeOfBuilding: SmartPark
 --- !u!65 &2309214626903727093
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -6,45 +6,56 @@ public class VehicleSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject vehiclePrefab;
     [SerializeField] private GameObject bikePrefab;
-    [SerializeField] private int vehicleSpawnCount;
+    [SerializeField] private int maxVehicleCount;
+    [SerializeField] private int carMax;
+    [SerializeField] private int bikeMax;
     [SerializeField] GameObject[] vehicleSpawnPoints;
+    //idea: fetch ratios and such variables from vehicleMixManager. 
     [SerializeField] private float carToBikeDifference;
 
-    private int activeVehicleCount { get { return activeCarCount + activeGreenCount; } }
+    private int activeVehicleCount { get { return activeCarCount + activeBikeCount + activeGarbagetruckCount; } }
+    //types of vehicles
     private int activeCarCount;
-    private int activeGreenCount;
+    private int activeBikeCount;
+    private int activeGarbagetruckCount;
+    
+
 
     private void Start()
     {
         StartCoroutine(IntialSpawn());
         EventManager.Instance.RegisterListener<VehicleDespawnEvent>(DespawnEvent);
+        EventManager.Instance.RegisterListener<BuildingSwapEvent>(OnBuildingSwap);
     }
 
-    private void Update()
+    private void OnBuildingSwap(BuildingSwapEvent eve)
     {
-        
+        //if a becycle stand was added, increase proportion of bikes on roads.
+        if (eve.newBuilding.GetComponent<Building>().TypeOfBuilding.Equals("BicycleStand")) {
+            int change = bikeMax / 2;
+            bikeMax += change; //increase by 50%;
+            carMax -= change; // decrease by same amount
+            Debug.Log("New bike max count: " + bikeMax + " car max count: " + carMax);
+        }
     }
 
     IEnumerator IntialSpawn()
     {
         int count = 0;
-        GameObject obj;
-        while (count < vehicleSpawnCount)
+        
+        while (count < maxVehicleCount)
         {
-            if(carToBikeDifference < (activeCarCount - activeGreenCount))
+            if (activeBikeCount < bikeMax) //Old control: carToBikeDifference < (activeCarCount - activeBikeCount)
             {
-                obj = Instantiate(bikePrefab);
-                activeGreenCount++;
+                InstantiateVehicle(ref bikePrefab);
+                activeBikeCount++;
             }
-            else
+            else if (activeCarCount < carMax)
             {
-                obj = Instantiate(vehiclePrefab);
+                InstantiateVehicle(ref vehiclePrefab);
                 activeCarCount++;
             }
-            Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
-            obj.GetComponent<WaypointNavigator>().currentWaypoint = child.GetComponent<Waypoint>();
-            obj.transform.position = child.position;
-
+            
             yield return new WaitForEndOfFrame();
             count++;
         }
@@ -54,22 +65,29 @@ public class VehicleSpawner : MonoBehaviour
     {
         //print(activeVehicleCount);
 
-        GameObject obj;
-        while (activeVehicleCount < vehicleSpawnCount)
+        while (activeVehicleCount < maxVehicleCount)
         {
-            if (carToBikeDifference < (activeCarCount - activeGreenCount))
-            {
-                obj = Instantiate(bikePrefab);
-                activeGreenCount++;
+            int randomInt = 0;
+
+            // the purpose of this is to maske sure only 1 vehicle spaws each call if both/all types are "legal" to spawn.
+            if (activeBikeCount < bikeMax && activeCarCount < carMax) { 
+                randomInt = Random.Range(1, 3);
+                Debug.Log("rand int is: " + randomInt);
             }
-            else
+
+            if (activeBikeCount < bikeMax && (randomInt == 0 || randomInt == 1)) //Old control: carToBikeDifference < (activeCarCount - activeBikeCount)
             {
-                obj = Instantiate(vehiclePrefab);
+                InstantiateVehicle(ref bikePrefab);
+                activeBikeCount++;
+            }
+            else if (activeCarCount < carMax && (randomInt == 0 || randomInt == 2))
+            {
+                InstantiateVehicle(ref vehiclePrefab);
                 activeCarCount++;
             }
-            GameObject spawnPoint = vehicleSpawnPoints[Random.Range(0, (vehicleSpawnPoints.Length - 1))];
-            obj.GetComponent<WaypointNavigator>().currentWaypoint = spawnPoint.GetComponent<Waypoint>();
-            obj.transform.position = spawnPoint.transform.position;
+
+            Debug.Log("spawn vehicle: " + activeVehicleCount + " Type: " + randomInt);
+
         }
     }
 
@@ -82,10 +100,41 @@ public class VehicleSpawner : MonoBehaviour
         }
         else
         {
-            activeGreenCount--;
+            activeBikeCount--;
         }
         Destroy(eve.Vehicle.gameObject);
         SpawnVehicle();
         print(eve.Description);
     }
+
+    /*
+    private void InstantiateVehicle() {
+        GameObject obj;
+        if (activeBikeCount < bikeMax) //Old control: carToBikeDifference < (activeCarCount - activeBikeCount)
+        {
+            obj = Instantiate(bikePrefab);
+            Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
+            obj.GetComponent<WaypointNavigator>().currentWaypoint = child.GetComponent<Waypoint>();
+            obj.transform.position = child.position;
+            activeBikeCount++;
+        }
+        else if (activeCarCount < carMax)
+        {
+            obj = Instantiate(vehiclePrefab);
+            Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
+            obj.GetComponent<WaypointNavigator>().currentWaypoint = child.GetComponent<Waypoint>();
+            obj.transform.position = child.position;
+            activeCarCount++;
+        }
+    }
+    */
+
+    private void InstantiateVehicle(ref GameObject typeOfVehicle)
+    {
+        GameObject obj = Instantiate(typeOfVehicle);
+        Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
+        obj.GetComponent<WaypointNavigator>().currentWaypoint = child.GetComponent<Waypoint>();
+        obj.transform.position = child.position;
+    }
+
 }

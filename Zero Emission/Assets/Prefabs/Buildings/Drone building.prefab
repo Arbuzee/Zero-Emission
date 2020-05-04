@@ -1009,9 +1009,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee541f6c78ca1304cb1a70857ade0f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1
-  co2Rating: 0
-  TypeOfBuilding: 
+  size: 2
+  co2Rating: 40
+  TypeOfBuilding: DroneHub
   drones: {fileID: 7784624334687554466}
   minDroneLiftTime: 1
   maxDroneLiftTime: 5
