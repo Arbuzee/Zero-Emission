@@ -6,7 +6,7 @@ public class Vehicle : MonoBehaviour
 {
     public enum VehicleType
     {
-        Car, Bike, Scooter
+        Car, Bike, Scooter, AutonomousCar
     }
     public VehicleType type;
     
