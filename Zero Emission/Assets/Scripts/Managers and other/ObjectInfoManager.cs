@@ -12,6 +12,7 @@ public class ObjectInfoManager : MonoBehaviour, IPointerClickHandler
     [TextArea(15, 15)]
     [SerializeField] private string description;
 
+
     public void OnPointerClick(PointerEventData eventData)
     {
 

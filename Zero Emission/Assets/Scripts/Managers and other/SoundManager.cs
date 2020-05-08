@@ -7,7 +7,11 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager Instance;
 
-    private AudioSource aSrc;
+    [SerializeField]private AudioSource musicSrc;
+    [SerializeField]private AudioSource sfxSrc;
+
+    private ArrayList audioObjects;
+
 
     private void Awake()
     {
@@ -22,18 +26,29 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        aSrc = GetComponent<AudioSource>();
+        EventManager.Instance.RegisterListener<BuildingSwapEvent>(OnBuildingSwap);
+        
     }
 
     public void SetMusic(bool on) {
         if (on)
         {
-            aSrc.Play();
+            musicSrc.Play();
+            sfxSrc.Play();
         }
         else {
-            aSrc.Stop();
+            musicSrc.Stop();
+            sfxSrc.Stop();
         }
         
+    }
+
+    private void OnBuildingSwap(BuildingSwapEvent eve) {
+        //add ref to audioSources of new added building on map to list here so they may be controlled from manager. 
+        AudioSource sound;
+        if (eve.newBuilding.TryGetComponent<AudioSource>(out sound))
+            audioObjects.Add(sound);
+
     }
 
 
