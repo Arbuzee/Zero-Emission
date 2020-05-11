@@ -182,10 +182,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.49411765}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.5372549}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.39288896, g: 0.50994945, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -465,10 +465,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.01886791, g: 0, b: 0, a: 0.57254905}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -999,7 +999,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8584906, g: 0.22272164, b: 0.22272164, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.50980395}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.9622642, g: 0.19517623, b: 0.19517623, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1549,6 +1549,7 @@ GameObject:
   - component: {fileID: 6009026448771768531}
   - component: {fileID: 8866723284774440090}
   - component: {fileID: 1112964262012158812}
+  - component: {fileID: 857359738}
   m_Layer: 5
   m_Name: RawImage (5)
   m_TagString: Untagged
@@ -1620,11 +1621,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d589a8546c51a9e4db64f77d21a4c955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 7376722978989256404, guid: 7acc43332ce467b43801710f48b571c9,
+  building: {fileID: 4489360027121054015, guid: 75c2179aaf7d67e4bb6298b2dbef529e,
     type: 3}
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &857359738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874602540460476343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpTime: 5
+  title: Electric car charging station
+  description: 'This smart charging station emitts no CO2 as it mainly generates
+    electricity from solar panels. Thos object placed in the town will increase the
+    amount of elecrical and autonomous cars in the town, as it allows them to be
+    used and recharged here. '
 --- !u!1 &2517402291164405902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1675,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7579367534855265954}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.0500001}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2008,12 +2027,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7480951446815902144}
-  m_LocalRotation: {x: 0, y: 0.9999804, z: -0, w: -0.0062654624}
+  m_LocalRotation: {x: -0, y: 0.9999804, z: -0, w: -0.0062654624}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7579367534855265954}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180.71799, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2209,8 +2228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpTime: 5
-  title: titlle
-  description: wooosh
+  title: Drone Hub
+  description: This building houses a swarm of drones. These drones handles several
+    tasks around the city in an efficient and eco friendy way.
 --- !u!1 &7579367534440310479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2243,7 @@ GameObject:
   - component: {fileID: 7579367534440310475}
   - component: {fileID: 7579367534440310474}
   - component: {fileID: 7579367534440310473}
+  - component: {fileID: 857359733}
   m_Layer: 5
   m_Name: RawImage (1)
   m_TagString: Untagged
@@ -2299,6 +2320,23 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &857359733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7579367534440310479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpTime: 5
+  title: Regular apartment building
+  description: 'This is a regular compartment building that houses city residents.
+    Its a by all means standard buildning, letting out moderate amounts of CO2 by
+    maintenance. '
 --- !u!1 &7579367534524933383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2349,7 @@ GameObject:
   - component: {fileID: 7579367534524933379}
   - component: {fileID: 7579367534524933378}
   - component: {fileID: 7579367534524933377}
+  - component: {fileID: 857359740}
   m_Layer: 5
   m_Name: RawImage (3)
   m_TagString: Untagged
@@ -2363,7 +2402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ced318010053dd740bb10eecf94c814b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7470d63a5100ac14d9a52360573abce3, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2382,11 +2421,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d589a8546c51a9e4db64f77d21a4c955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 4351664577164254700, guid: b2290c16e6ac9aa418aedfb4d7b178a8,
+  building: {fileID: 6938838451873085677, guid: f289a7a8598a8e549857185fc82882f8,
     type: 3}
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &857359740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7579367534524933383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpTime: 5
+  title: Bicycle stand
+  description: a small bicycle stand. Having a few of these in the town allows the
+    residents to easier use their bicykles when getting around town and simply storing
+    them. This object lets out no CO2, and will increase the amount of bicycles in
+    the area by a small amount.
 --- !u!1 &7579367534855265958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2457,7 @@ GameObject:
   - component: {fileID: 7579367534855265952}
   - component: {fileID: 7579367534855265959}
   - component: {fileID: 434318878}
+  - component: {fileID: 1856804831}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2420,8 +2478,8 @@ RectTransform:
   m_Children:
   - {fileID: 7579367536033076448}
   - {fileID: 4627179712688048841}
-  - {fileID: 5654598113413594079}
   - {fileID: 1907684442811695930}
+  - {fileID: 5654598113413594079}
   - {fileID: 765882551}
   - {fileID: 2047274685}
   - {fileID: 6774331096136821458}
@@ -2506,6 +2564,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 8050800787888901356}
+--- !u!114 &1856804831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7579367534855265958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8543f776eb728184a868a72d7e05cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopupWindow: {fileID: 1061971923395695212, guid: 262a1fd9b58677b489a90405b0db1d7b,
+    type: 3}
 --- !u!1 &7579367534912337203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,6 +2590,7 @@ GameObject:
   - component: {fileID: 7579367534912337231}
   - component: {fileID: 7579367534912337230}
   - component: {fileID: 7579367534912337229}
+  - component: {fileID: 857359739}
   m_Layer: 5
   m_Name: RawImage (4)
   m_TagString: Untagged
@@ -2594,6 +2667,24 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &857359739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7579367534912337203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpTime: 5
+  title: Wind turbine
+  description: This object generates electricity for the town which is crucial for
+    the transfer from fossil fuels usage to clean energy. Placing a wind turbine
+    will decrease the use of fossil fuel for the towns energy needs by a moderate
+    amount.
 --- !u!1 &7579367535971163475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2697,7 @@ GameObject:
   - component: {fileID: 7579367535971163503}
   - component: {fileID: 7579367535971163502}
   - component: {fileID: 7579367535971163501}
+  - component: {fileID: 857359741}
   m_Layer: 5
   m_Name: RawImage (2)
   m_TagString: Untagged
@@ -2682,6 +2774,24 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &857359741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7579367535971163475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpTime: 5
+  title: SmartPark parking garage
+  description: 'This building is a several story high garage for rent. This building
+    allows for a greater amount of cars to enter the town as it provides aan easy
+    way of parking it when not used. This building emits a moderate amount of CO2
+    and also increases the amounts of cars in the town area. '
 --- !u!1 &7579367536033076455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,7 +2803,6 @@ GameObject:
   - component: {fileID: 7579367536033076448}
   - component: {fileID: 7579367536033076450}
   - component: {fileID: 7579367536033076449}
-  - component: {fileID: 247544613}
   - component: {fileID: 3379159219526492724}
   m_Layer: 5
   m_Name: BuildingsPanel
@@ -2763,19 +2872,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &247544613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7579367536033076455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44027fbe7a0fa5439a27237e4ee6a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalPages: 2
 --- !u!114 &3379159219526492724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2806,7 +2902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6774331096136821458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2829,7 +2925,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 750, y: 0}
+  m_SizeDelta: {x: 550, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5629326912997715139
 CanvasRenderer:

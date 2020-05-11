@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 2
-  co2Rating: 40
+  co2Rating: 0
   TypeOfBuilding: DroneHub
   drones: {fileID: 7784624334687554466}
   minDroneLiftTime: 1

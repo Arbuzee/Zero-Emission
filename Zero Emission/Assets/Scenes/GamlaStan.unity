@@ -16557,169 +16557,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.a
-      value: 0.49411765
-      objectReference: {fileID: 0}
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 202924301, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.a
-      value: 0.5372549
-      objectReference: {fileID: 0}
-    - target: {fileID: 347121994, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: title
-      value: Drone Hub
-      objectReference: {fileID: 0}
-    - target: {fileID: 347121994, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: description
-      value: This building houses a swarm of drones. These drones handles several
-        tasks around the city in an efficient and eco friendy way.
-      objectReference: {fileID: 0}
-    - target: {fileID: 359062062, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 359062062, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 359062062, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 468937640, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 468937640, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 468937640, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.a
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.01886791
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568592501, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.a
-      value: 0.57254905
-      objectReference: {fileID: 0}
-    - target: {fileID: 927170035, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 927170035, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 927170035, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 927170035, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.a
-      value: 0.50980395
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504225508, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504225508, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504225508, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771726711, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9622642
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771726711, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.g
-      value: 0.19517623
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771726711, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.b
-      value: 0.19517623
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771726711, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112964262012158812, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: building
+    - target: {fileID: 1856804831, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
+      propertyPath: PopUpImage
       value: 
-      objectReference: {fileID: 4489360027121054015, guid: 75c2179aaf7d67e4bb6298b2dbef529e,
+      objectReference: {fileID: 1730521981107770053, guid: fc61157132e2fb64db02abf28264a78c,
         type: 3}
-    - target: {fileID: 6774331096136821458, guid: 0c334c3b9a4051649aee0114f638031e,
+    - target: {fileID: 3379159219526492724, guid: 0c334c3b9a4051649aee0114f638031e,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 550
+      propertyPath: totalPages
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 7579367534524933377, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: building
-      value: 
-      objectReference: {fileID: 6938838451873085677, guid: f289a7a8598a8e549857185fc82882f8,
-        type: 3}
-    - target: {fileID: 7579367534524933378, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 7470d63a5100ac14d9a52360573abce3, type: 3}
     - target: {fileID: 7579367534855265954, guid: 0c334c3b9a4051649aee0114f638031e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16830,132 +16677,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8050800787888901356, guid: 0c334c3b9a4051649aee0114f638031e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c334c3b9a4051649aee0114f638031e, type: 3}
---- !u!1 &857359732 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7579367534440310479, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &857359733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857359732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpTime: 5
-  title: Regular apartment building
-  description: 'This is a regular compartment building that houses city residents.
-    Its a by all means standard buildning, letting out moderate amounts of CO2 by
-    maintenance. '
---- !u!1 &857359734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1874602540460476343, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &857359735 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7579367534912337203, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &857359736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7579367534524933383, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &857359737 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7579367535971163475, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &857359738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857359734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpTime: 5
-  title: Electric car charging station
-  description: 'This smart charging station emitts no CO2 as it mainly generates
-    electricity from solar panels. Thos object placed in the town will increase the
-    amount of elecrical and autonomous cars in the town, as it allows them to be
-    used and recharged here. '
---- !u!114 &857359739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857359735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpTime: 5
-  title: Wind turbine
-  description: This object generates electricity for the town which is crucial for
-    the transfer from fossil fuels usage to clean energy. Placing a wind turbine
-    will decrease the use of fossil fuel for the towns energy needs by a moderate
-    amount.
---- !u!114 &857359740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857359736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpTime: 5
-  title: Bicycle stand
-  description: a small bicycle stand. Having a few of these in the town allows the
-    residents to easier use their bicykles when getting around town and simply storing
-    them. This object lets out no CO2, and will increase the amount of bicycles in
-    the area by a small amount.
---- !u!114 &857359741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857359737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6637779c50e4b4b439233eb023587413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpTime: 5
-  title: SmartPark parking garage
-  description: 'This building is a several story high garage for rent. This building
-    allows for a greater amount of cars to enter the town as it provides aan easy
-    way of parking it when not used. This building emits a moderate amount of CO2
-    and also increases the amounts of cars in the town area. '
 --- !u!1 &858495872
 GameObject:
   m_ObjectHideFlags: 0
@@ -33762,26 +33485,6 @@ Transform:
   m_Father: {fileID: 144437503}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: -112.63701, z: 0}
---- !u!1 &1856804825 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7579367534855265958, guid: 0c334c3b9a4051649aee0114f638031e,
-    type: 3}
-  m_PrefabInstance: {fileID: 857359731}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1856804831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856804825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8543f776eb728184a868a72d7e05cb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PopupWindow: {fileID: 1061971923395695212, guid: 262a1fd9b58677b489a90405b0db1d7b,
-    type: 3}
 --- !u!1001 &1870607231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41504,3 +41207,122 @@ Transform:
   m_Father: {fileID: 144437503}
   m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2538956728264616662
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1730521981107770053, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_Name
+      value: PopUpImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -522.55853
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -498.27075
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.5908203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245417597528616546, guid: fc61157132e2fb64db02abf28264a78c,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc61157132e2fb64db02abf28264a78c, type: 3}
