@@ -10,6 +10,7 @@ public class PopulationFeedback : MonoBehaviour
     [SerializeField] private float displayTime;
     [SerializeField] private GameObject PopUpImage;
     [SerializeField] private int ImageChance = 15;
+    [SerializeField] private float ImageOffset = 50f;
 
 
 
@@ -48,7 +49,7 @@ public class PopulationFeedback : MonoBehaviour
     private void ShowImage() {
         //GameObject imageObj = Instantiate(PopUpImage, gameObject.transform.position, gameObject.transform.rotation, gameObject.transform);
         GameObject imageObj = Instantiate(PopUpImage, gameObject.transform.position, gameObject.transform.rotation, gameObject.transform.GetChild(0).transform);
-        imageObj.transform.position = gameObject.transform.position;
+        imageObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + ImageOffset, gameObject.transform.position.z);
         imageObj.GetComponent<RawImage>().texture = happySmileyImg;
         Destroy(imageObj, displayTime);
     }

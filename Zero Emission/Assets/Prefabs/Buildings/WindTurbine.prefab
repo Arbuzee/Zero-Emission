@@ -141,7 +141,7 @@ Transform:
   m_GameObject: {fileID: 7376722978989256404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.876262, y: 2.876262, z: 2.876262}
   m_Children:
   - {fileID: 8825185001693634137}
   m_Father: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20263cb5a86439a419f476ee269a4089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 0
+  size: 2
   co2Rating: 0
   TypeOfBuilding: WindTurbine
 --- !u!1 &8827300073801657712
