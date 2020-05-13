@@ -232,5 +232,5 @@ MonoBehaviour:
   displayTime: 4
   PopUpImage: {fileID: 1730521981107770053, guid: fc61157132e2fb64db02abf28264a78c,
     type: 3}
-  ImageChance: 1
-  ImageOffset: 300
+  ImageChance: 15
+  ImageOffset: 180
