@@ -10,13 +10,13 @@ public class Vehicle : MonoBehaviour
     }
     public VehicleType type;
     
-    [SerializeField] private float minSpeed;
-    [SerializeField] private float maxSpeed;
-    [SerializeField] private float rotationSpeed;
-    [SerializeField] private float stopDistance;
+    [SerializeField] private float minSpeed = 20f;
+    [SerializeField] private float maxSpeed = 20f;
+    [SerializeField] private float rotationSpeed = 400;
+    [SerializeField] private float stopDistance = 3;
     [SerializeField] private Vector3 destination;
 
-    private float movementSpeed;
+    [SerializeField] private float movementSpeed;
     private Vector3 lastPosition;
 
     public bool reachedDestination;

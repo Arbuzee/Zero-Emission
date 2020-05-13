@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  minSpeed: 5
-  maxSpeed: 8
-  rotationSpeed: 10
-  stopDistance: 1
+  minSpeed: 20
+  maxSpeed: 20
+  rotationSpeed: 400
+  stopDistance: 3
   destination: {x: 0, y: 0, z: 0}
   reachedDestination: 0
 --- !u!114 &3551723102778391963

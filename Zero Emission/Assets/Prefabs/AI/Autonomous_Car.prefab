@@ -98,11 +98,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  minSpeed: 5
-  maxSpeed: 10
-  rotationSpeed: 10
-  stopDistance: 1
+  minSpeed: 20
+  maxSpeed: 20
+  rotationSpeed: 400
+  stopDistance: 3
   destination: {x: 0, y: 0, z: 0}
+  rayCastDistance: 3
+  rayCastObject: {fileID: 0}
+  movementSpeed: 0
   reachedDestination: 0
 --- !u!114 &3824327335274575934
 MonoBehaviour:

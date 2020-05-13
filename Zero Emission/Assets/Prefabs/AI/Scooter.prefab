@@ -534,6 +534,7 @@ MonoBehaviour:
   rotationSpeed: 400
   stopDistance: 2
   destination: {x: 0, y: 0, z: 0}
+  movementSpeed: 0
   reachedDestination: 0
 --- !u!114 &357299571613704867
 MonoBehaviour:
