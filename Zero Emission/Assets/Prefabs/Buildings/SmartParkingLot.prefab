@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 3708812148941958299}
   - component: {fileID: 384557963773840726}
   m_Layer: 0
-  m_Name: SmartParkingLot2
+  m_Name: SmartParkingLot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -696,8 +696,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5718789997331724210}
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: -1015.1, y: 376.2, z: 451.7}
-  m_LocalScale: {x: 22.818241, y: 22.818241, z: 22.818241}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 18, y: 18, z: 18}
   m_Children:
   - {fileID: 1795561222769815154}
   - {fileID: 8861988928914558520}
