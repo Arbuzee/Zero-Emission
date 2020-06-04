@@ -16,7 +16,7 @@ GameObject:
   m_Layer: 9
   m_Name: PlacementArea
   m_TagString: PlacementArea
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299c74e589657234092d4460c6782cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentBuilding: {fileID: 0}
   Size: 0
 --- !u!54 &2934098629260687994
 Rigidbody:
