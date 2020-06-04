@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6938838451873085677
+--- !u!1 &5953886263513980719
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6201717366072642302}
-  - component: {fileID: 3119846278183170248}
-  - component: {fileID: 8680515393219284017}
-  - component: {fileID: 1399029421112304102}
-  - component: {fileID: 2214171152155565147}
-  m_Layer: 8
-  m_Name: BicycleStand
-  m_TagString: Building
+  - component: {fileID: 7276460037646773564}
+  - component: {fileID: 1846523560022890250}
+  - component: {fileID: 5376350237466438643}
+  - component: {fileID: 6907520556163309437}
+  m_Layer: 0
+  m_Name: YellowSideHouse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6201717366072642302
+--- !u!4 &7276460037646773564
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6938838451873085677}
+  m_GameObject: {fileID: 5953886263513980719}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 96.04495, y: 382.19022, z: -10.10447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3119846278183170248
+--- !u!33 &1846523560022890250
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6938838451873085677}
-  m_Mesh: {fileID: -7899846897418002119, guid: f5d4889ef6c0cf749a15b4a17e6df272, type: 3}
---- !u!23 &8680515393219284017
+  m_GameObject: {fileID: 5953886263513980719}
+  m_Mesh: {fileID: 3179356910276457558, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+--- !u!23 &5376350237466438643
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6938838451873085677}
+  m_GameObject: {fileID: 5953886263513980719}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,10 +59,15 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1101424394045842098, guid: f5d4889ef6c0cf749a15b4a17e6df272, type: 3}
-  - {fileID: 799446271661286318, guid: f5d4889ef6c0cf749a15b4a17e6df272, type: 3}
-  - {fileID: 4361018597392019981, guid: f5d4889ef6c0cf749a15b4a17e6df272, type: 3}
-  - {fileID: -7805965318761107941, guid: f5d4889ef6c0cf749a15b4a17e6df272, type: 3}
+  - {fileID: 6440473110866650204, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: 333842055559900479, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: -1379044767392073423, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: 6145359340615456111, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: -4751053739510143992, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: -1459853526681264358, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: 5314548807250000651, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: 3795377513899523652, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
+  - {fileID: -5882441832438056658, guid: 0b43a8df25907be4eae4caf7da5c1cd2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,31 +88,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1399029421112304102
+--- !u!114 &6907520556163309437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6938838451873085677}
+  m_GameObject: {fileID: 5953886263513980719}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20263cb5a86439a419f476ee269a4089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 3
-  co2Rating: 0
-  TypeOfBuilding: BicycleStand
---- !u!65 &2214171152155565147
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6938838451873085677}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.897542, y: 3.2788246, z: 1.4249924}
-  m_Center: {x: 0.00000011920929, y: 0, z: 0}
+  size: 1
+  co2Rating: 20
+  TypeOfBuilding: YellowSideHouse

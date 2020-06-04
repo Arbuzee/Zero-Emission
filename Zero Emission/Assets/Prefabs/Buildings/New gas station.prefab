@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 1
   co2Rating: 0
-  TypeOfBuilding: 
+  TypeOfBuilding: NewGasStation
 --- !u!65 &2714785196186658391
 BoxCollider:
   m_ObjectHideFlags: 0

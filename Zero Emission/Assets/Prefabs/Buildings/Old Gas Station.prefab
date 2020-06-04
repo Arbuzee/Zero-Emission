@@ -842,8 +842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1
-  co2Rating: 55
-  TypeOfBuilding: GasStation
+  co2Rating: 80
+  TypeOfBuilding: OldGasStation
 --- !u!1 &3192815459110937722
 GameObject:
   m_ObjectHideFlags: 0

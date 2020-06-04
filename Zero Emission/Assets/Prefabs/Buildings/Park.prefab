@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7497953251330281538}
   - component: {fileID: 5086310261551039742}
   m_Layer: 0
-  m_Name: Park02 (2)
+  m_Name: Park
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20263cb5a86439a419f476ee269a4089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1
+  size: 2
   co2Rating: 0
   TypeOfBuilding: Park

@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20263cb5a86439a419f476ee269a4089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 2
+  size: 0
   co2Rating: 0
   TypeOfBuilding: WindTurbine
 --- !u!1 &8827300073801657712
