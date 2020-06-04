@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1995851034641691491}
   - component: {fileID: 1930088470685102759}
   m_Layer: 0
-  m_Name: P_Smoke_Big
+  m_Name: Smoke_Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2400678618314539036}
   m_LocalRotation: {x: -0.6532815, y: -0.27059802, z: -0.27059802, w: 0.6532815}
-  m_LocalPosition: {x: 0.17887771, y: 0.435241, z: -0.42461324}
-  m_LocalScale: {x: 0.044530746, y: 0.044530757, z: 0.04453075}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
