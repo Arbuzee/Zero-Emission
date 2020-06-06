@@ -13,12 +13,17 @@ public class ObjectivePrinter : MonoBehaviour
     private GameObject CurrentObjectiveObj;
     private Objective currentObjective;
     private int progressCount;
+    private AudioSource audioSource;
+
+    [SerializeField] private AudioClip successSound;
+
 
     public static ObjectivePrinter Instance { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         txt = gameObject.GetComponent<Text>();
         EventManager.Instance.RegisterListener<BuildingSwapEvent>(OnBuildingSwap);
         /*
@@ -46,6 +51,7 @@ public class ObjectivePrinter : MonoBehaviour
 
     private void ObjectiveSuccess() {
         Debug.Log("Objective finished!");
+        audioSource.PlayOneShot(successSound);
         string description = currentObjective.description + "You placed " + progressCount + "/" + currentObjective.count + " buildings of type: " + currentObjective.typeToBuild + ", Good job!";
         PopUpManager.Instance.ShowPopupWindow("Objective finished", description, 5.0f, Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 10f)));
         gameObject.GetComponent<Text>().text = "Objective Finished!";

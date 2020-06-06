@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2877781093176058549}
   - component: {fileID: 2877781093176058546}
-  m_Layer: 0
+  - component: {fileID: 7839282319639618620}
+  m_Layer: 8
   m_Name: WindField
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +51,19 @@ MonoBehaviour:
   size: 2
   co2Rating: 0
   TypeOfBuilding: WindField
+--- !u!65 &7839282319639618620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877781093176058548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 184.17026, y: 72.06442, z: 269.29294}
+  m_Center: {x: 6.5493927, y: 35.53221, z: -39.648605}
 --- !u!1001 &2877781092573334368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,7 +74,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -129.70001
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -70,7 +84,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1511.5
+      value: -118
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -127,10 +141,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.1680965
       objectReference: {fileID: 0}
+    - target: {fileID: -4214470490016819149, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_Name
       value: WindTurbine (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198531897541347679, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d85e2c8690c63b4baa598cc75ec9f44, type: 3}
@@ -150,7 +179,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -143.70001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -160,7 +189,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1646.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -217,10 +246,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.1680965
       objectReference: {fileID: 0}
+    - target: {fileID: -4214470490016819149, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_Name
       value: WindTurbine (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198531897541347679, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d85e2c8690c63b4baa598cc75ec9f44, type: 3}
@@ -240,7 +284,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -265.7
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -250,7 +294,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1521.5
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -307,10 +351,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.1680965
       objectReference: {fileID: 0}
+    - target: {fileID: -4214470490016819149, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_Name
       value: WindTurbine (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198531897541347679, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d85e2c8690c63b4baa598cc75ec9f44, type: 3}
@@ -330,7 +389,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -249.70001
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -340,7 +399,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1395.5
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
@@ -397,10 +456,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.1680965
       objectReference: {fileID: 0}
+    - target: {fileID: -4214470490016819149, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
         type: 3}
       propertyPath: m_Name
       value: WindTurbine (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198531897541347679, guid: 8d85e2c8690c63b4baa598cc75ec9f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d85e2c8690c63b4baa598cc75ec9f44, type: 3}
