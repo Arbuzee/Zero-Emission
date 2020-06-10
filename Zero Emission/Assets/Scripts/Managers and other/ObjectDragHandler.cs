@@ -29,6 +29,9 @@ public class ObjectDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, I
                 CameraDrag.Instance.enabled = false;
             }
         }
+        if (Input.GetMouseButtonUp(0)) {
+            CameraDrag.Instance.enabled = true;
+        }
         
     }
 
